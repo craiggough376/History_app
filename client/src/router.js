@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home';
-import RomeStory '@/views/RomeStory';
+import RomeStory from '@/views/RomeStory';
 import WW2Story from '@/views/WW2Story';
 import USAStory from '@/views/USAStory';
 
