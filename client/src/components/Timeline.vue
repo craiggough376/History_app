@@ -4,7 +4,10 @@
     <div class="start-date">1980</div>
     <div class="end-date">1995</div>
     <div class="timeline"></div>
-    <div class="episode1">1984: This happened</div>
+    <div class="episode1">
+      <p>{{episodes[0].date}}</p>
+      <p>{{episodes[0].title}}</p>
+    </div>
     <div class="episode1branch"></div>
     <div class="episode2">1986: This other thing happened</div>
     <div class="episode2branch"></div>
@@ -16,8 +19,7 @@
 export default {
   data() {
     return {
-      numbers: [0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4
-      ]
+      episodes: [{date: 1984, title: "This happened in this time a long time ago in a galaxy far far away and over and over and over"}, {date: 1986, title: "This happened in another time"}]
     }
   }
 }
@@ -50,23 +52,27 @@ export default {
 }
 .episode1{
   border: 1px solid black;
-  grid-column: 2/8;
+  grid-column: 2/10;
   grid-row: 2/4;
+  overflow: scroll;
 }
 .episode1branch{
   border-right: 1px solid black;
-  grid-column: 4/4;
+  grid-column: 5/5;
   grid-row: 4/6;
 }
 .episode2{
   border: 1px solid black;
-  grid-column: 12/18;
+  grid-column: 12/20;
   grid-row: 2/4;
 }
 .episode2branch{
   border-right: 1px solid black;
   grid-column: 14/14;
   grid-row: 4/6;
+}
+p{
+  margin: 0px;
 }
 
 </style>
