@@ -10,7 +10,7 @@
       <p>{{episode.date}}</p>
       <p>{{episode.title}}</p>
     </div>
-    <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]">
+    <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]" style="">
     </div>
     <div class="episodexbranch"></div>
   </div>
@@ -32,28 +32,11 @@ export default {
       {date: 1986, title: "This happened in another time"},
     ],
     boxWidth: 4,
-    boxGap: 1
+    boxGap: 1,
+    selectedEpisode: 1
     }
   },
   computed: {
-    // styles() {
-    //   const stylesArray = []
-    //   let startingColumn = 2
-    //   let endingColumn = startingColumn + this.boxWidth
-    //   for(let i=0; i < this.episodes.length; i++){
-    //     const baseStyle = {
-    //       border: '1px solid black',
-    //       'grid-column': '',
-    //       'grid-row': '3/5',
-    //       overflow: 'scroll',
-    //     }
-    //     stylesArray.push(baseStyle);
-    //     stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
-    //     startingColumn += (1 + this.boxWidth);
-    //     endingColumn += (1 + this.boxWidth);
-    //   }
-    //   return stylesArray
-    // },
     styles() {
       const noOfEpisodes = this.episodes.length
       const episodeGap = Math.floor(43/(noOfEpisodes))
@@ -66,6 +49,9 @@ export default {
           'grid-column': '',
           'grid-row': '3/5',
           overflow: 'scroll',
+        }
+        if(i == this.selectedEpisode){
+          baseStyle['background-color'] = 'blue'
         }
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
