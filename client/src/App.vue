@@ -1,6 +1,12 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <router-view></router-view>
+=======
+
+
+
+>>>>>>> develop
   </div>
 </template>
 
