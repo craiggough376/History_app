@@ -4,13 +4,15 @@
     <div class="start-date">1980</div>
     <div class="end-date">1995</div>
     <div class="timeline"></div>
-    <div class="episode1">
-      <p>{{episodes[0].date}}</p>
-      <p>{{episodes[0].title}}</p>
-    </div>
+    <div class="episode0branch"></div>
     <div class="episode1branch"></div>
-    <div class="episode2">1986: This other thing happened</div>
-    <div class="episode2branch"></div>
+    <div v-for="(episode, index) in episodes" :class="'episode'+index" :style="styles[index]">
+      <p>{{episode.date}}</p>
+      <p>{{episode.title}}</p>
+    </div>
+    <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]">
+    </div>
+    <!-- {{styles}} -->
   </div>
 </div>
 </template>
@@ -19,9 +21,52 @@
 export default {
   data() {
     return {
-      episodes: [{date: 1984, title: "This happened in this time a long time ago in a galaxy far far away and over and over and over"}, {date: 1986, title: "This happened in another time"}]
+      episodes: [
+        {date: 1984, title: "This happened in this time a long time ago in a galaxy far far away and over and over and over"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"}
+    ]
+    }
+  },
+  computed: {
+    styles() {
+      const stylesArray = []
+      let startingColumn = 2
+      let endingColumn = 10
+      for(let i=0; i < this.episodes.length; i++){
+        const baseStyle = {
+          border: '1px solid black',
+          'grid-column': '',
+          'grid-row': '2/4',
+          overflow: 'scroll',
+        }
+        stylesArray.push(baseStyle);
+        stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
+        console.log(stylesArray)
+        startingColumn += 10;
+        endingColumn += 10;
+      }
+      return stylesArray
+    },
+    branches() {
+      const stylesArray = []
+      let column = 5
+      for(let i=0; i < this.episodes.length; i++){
+        const baseStyle = {
+          'border-right': '1px solid black',
+          'grid-column': '',
+          'grid-row': '4/6',
+        }
+        stylesArray.push(baseStyle);
+        stylesArray[i]['grid-column'] = column + '/' + column;
+        column += 10;
+      }
+      return stylesArray
     }
   }
+
 }
 </script>
 
@@ -50,25 +95,25 @@ export default {
   grid-column: 3 / 49;
   grid-row: 5 / 6;
 }
-.episode1{
+/* .episode0{
   border: 1px solid black;
   grid-column: 2/10;
   grid-row: 2/4;
   overflow: scroll;
-}
-.episode1branch{
+} */
+.episode0branch{
   border-right: 1px solid black;
   grid-column: 5/5;
   grid-row: 4/6;
 }
-.episode2{
+/* .episode1{
   border: 1px solid black;
   grid-column: 12/20;
   grid-row: 2/4;
-}
-.episode2branch{
+} */
+.episode1branch{
   border-right: 1px solid black;
-  grid-column: 14/14;
+  grid-column: 15/15;
   grid-row: 4/6;
 }
 p{
