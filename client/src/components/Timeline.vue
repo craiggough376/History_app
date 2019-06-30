@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'timeline',
   data() {
     return {
       episodes: [
@@ -140,7 +141,7 @@ export default {
   /* grid-template-columns: repeat(50, 1fr); */
   grid-template-rows: repeat(6, 1fr);
   margin: auto;
-  height: 280px;
+  height: 200px;
   width: 90%;
   border: 1px solid blue;
   padding: 10px;
