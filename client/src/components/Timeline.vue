@@ -26,15 +26,19 @@ export default {
       {date: 1986, title: "This happened in another time"},
       {date: 1986, title: "This happened in another time"},
       {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"}
-    ]
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+    ],
+    boxWidth: 4,
     }
   },
   computed: {
     styles() {
       const stylesArray = []
       let startingColumn = 2
-      let endingColumn = 10
+      let endingColumn = startingColumn + this.boxWidth
       for(let i=0; i < this.episodes.length; i++){
         const baseStyle = {
           border: '1px solid black',
@@ -44,15 +48,14 @@ export default {
         }
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
-        console.log(stylesArray)
-        startingColumn += 10;
-        endingColumn += 10;
+        startingColumn += (2 + this.boxWidth);
+        endingColumn += (2 + this.boxWidth);
       }
       return stylesArray
     },
     branches() {
       const stylesArray = []
-      let column = 5
+      let column = 1 + this.boxWidth/2
       for(let i=0; i < this.episodes.length; i++){
         const baseStyle = {
           'border-right': '1px solid black',
@@ -61,7 +64,7 @@ export default {
         }
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = column + '/' + column;
-        column += 10;
+        column += (2 + this.boxWidth);
       }
       return stylesArray
     }
@@ -101,21 +104,21 @@ export default {
   grid-row: 2/4;
   overflow: scroll;
 } */
-.episode0branch{
+/* .episode0branch{
   border-right: 1px solid black;
   grid-column: 5/5;
   grid-row: 4/6;
-}
+} */
 /* .episode1{
   border: 1px solid black;
   grid-column: 12/20;
   grid-row: 2/4;
 } */
-.episode1branch{
+/* .episode1branch{
   border-right: 1px solid black;
   grid-column: 15/15;
   grid-row: 4/6;
-}
+} */
 p{
   margin: 0px;
 }
