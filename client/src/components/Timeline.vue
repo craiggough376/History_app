@@ -1,8 +1,8 @@
 <template lang="html">
 <div>
   <div class="grid" :style="gridStyle">
-    <div class="start-date">1980</div>
-    <div class="end-date">1995</div>
+    <div class="start-date">{{dateBreadth.start}}</div>
+    <div class="end-date">{{dateBreadth.end}}</div>
     <div class="timeline"></div>
     <div v-for="(episode, index) in episodes" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
       <p>{{episode.date}}</p>
@@ -10,8 +10,7 @@
     </div>
     <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]" style="">
     </div>
-    <div class="episodedown"></div>
-    <div class="episodedownbranch"></div>
+    <div class="test"></div>
   </div>
   <button v-on:click="handlePrevious">Previous</button>
   <button v-on:click="handleNext">Next</button>
@@ -46,8 +45,12 @@ export default {
     boxWidth: 8,
     boxGap: 1,
     selectedEpisode: 0,
-    highlightColor: 'powderblue',
-    gridsize: 100
+    highlightColor: 'lightcyan',
+    gridsize: 100,
+    dateBreadth: {
+      start: '1981',
+      end: '1988'
+    }
     }
   },
   computed: {
@@ -73,9 +76,13 @@ export default {
           'grid-column': '',
           'grid-row': '1/3',
           overflow: 'scroll',
+          'box-shadow': '1px 1px black'
         }
         if(i == this.selectedEpisode){
           baseStyle['background-color'] = this.highlightColor
+          baseStyle['box-shadow'] = '1px 1px navy'
+          baseStyle['border-color'] = 'navy'
+          baseStyle['font-weight'] = 'bold'
         }
         stylesArray.push(baseStyle);
         if(i % 2 == 1){
@@ -132,6 +139,7 @@ export default {
   display: grid;
   /* grid-template-columns: repeat(50, 1fr); */
   grid-template-rows: repeat(6, 1fr);
+  margin: auto;
   height: 280px;
   width: 90%;
   border: 1px solid blue;
@@ -150,10 +158,12 @@ export default {
   grid-row: 4 / 5;
 }
 .timeline {
-  border-bottom: 1px solid black;
+  border-bottom: 3px dashed black;
   grid-column: 3 / 98;
   grid-row: 3 / 4;
 }
+
+
 /* .episodedown {
   border: 1px solid black;
   grid-column: 4/8;
