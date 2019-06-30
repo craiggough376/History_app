@@ -12,7 +12,7 @@
     </div>
     <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]">
     </div>
-    <!-- {{styles}} -->
+    <div class="episodexbranch"></div>
   </div>
 </div>
 </template>
@@ -32,39 +32,62 @@ export default {
       {date: 1986, title: "This happened in another time"},
     ],
     boxWidth: 4,
+    boxGap: 1
     }
   },
   computed: {
+    // styles() {
+    //   const stylesArray = []
+    //   let startingColumn = 2
+    //   let endingColumn = startingColumn + this.boxWidth
+    //   for(let i=0; i < this.episodes.length; i++){
+    //     const baseStyle = {
+    //       border: '1px solid black',
+    //       'grid-column': '',
+    //       'grid-row': '3/5',
+    //       overflow: 'scroll',
+    //     }
+    //     stylesArray.push(baseStyle);
+    //     stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
+    //     startingColumn += (1 + this.boxWidth);
+    //     endingColumn += (1 + this.boxWidth);
+    //   }
+    //   return stylesArray
+    // },
     styles() {
+      const noOfEpisodes = this.episodes.length
+      const episodeGap = Math.floor(43/(noOfEpisodes))
       const stylesArray = []
       let startingColumn = 2
       let endingColumn = startingColumn + this.boxWidth
-      for(let i=0; i < this.episodes.length; i++){
+      for(let i=0; i < noOfEpisodes; i++){
         const baseStyle = {
           border: '1px solid black',
           'grid-column': '',
-          'grid-row': '2/4',
+          'grid-row': '3/5',
           overflow: 'scroll',
         }
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = startingColumn + '/' + endingColumn;
-        startingColumn += (2 + this.boxWidth);
-        endingColumn += (2 + this.boxWidth);
+        startingColumn += (1 + episodeGap);
+        endingColumn += (1 + episodeGap);
       }
       return stylesArray
     },
     branches() {
+      const noOfEpisodes = this.episodes.length
+      const episodeGap = Math.floor(43/(noOfEpisodes))
       const stylesArray = []
       let column = 1 + this.boxWidth/2
       for(let i=0; i < this.episodes.length; i++){
         const baseStyle = {
           'border-right': '1px solid black',
           'grid-column': '',
-          'grid-row': '4/6',
+          'grid-row': '5/6',
         }
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = column + '/' + column;
-        column += (2 + this.boxWidth);
+        column += (1 + episodeGap);
       }
       return stylesArray
     }
@@ -114,10 +137,10 @@ export default {
   grid-column: 12/20;
   grid-row: 2/4;
 } */
-/* .episode1branch{
+/* .episodexbranch{
   border-right: 1px solid black;
-  grid-column: 15/15;
-  grid-row: 4/6;
+  grid-column: 47/47;
+  grid-row: 5/6;
 } */
 p{
   margin: 0px;
