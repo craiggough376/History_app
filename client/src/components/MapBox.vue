@@ -1,10 +1,10 @@
 <template lang="html">
   <div class="map">
     <p>Map</p>
-    <l-map :zoom="zoom" :center="center" ref="map">
+    <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="url"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="places[index]['coordinates']">
-     <l-popup>
+     <l-popup ref="popup" class="popup">
        <h1>{{places[index]['title']}}</h1>
        <p>{{places[index]['blurb']}}</p>
      </l-popup>
@@ -20,6 +20,9 @@
 export default {
   name: "map-box",
   methods: {
+    showCoordinates(ev){
+    console.log(ev['latlng']['lat'], ev['latlng']['lng']);
+  },
     handleNextClick(){
       if ((this.index > -1) && (this.index < 2)){
           this.index ++
@@ -35,13 +38,15 @@ export default {
     beginJourney(){
       this.index = 0
       this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+      // this.$refs.map.mapObject.openPopup()
     }
   },
   data(){
     return{
       zoom:4,
-      center: L.latLng(47.413220, -1.219482),
-      url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      center: L.latLng(50.51342652633956, 13.0078125),
+      url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(47.413220, -1.219482),
       index: null,
       map: null,
@@ -63,6 +68,9 @@ export default {
         }
       ]
     }
+  },
+  mounted(){
+
   }
 }
 </script>
@@ -72,6 +80,12 @@ export default {
 .map{
   height: 70vh;
   width: 70vw;
+}
+
+.popup{
+  width: 300px;
+height: 150px;
+overflow: scroll;
 }
 
 </style>
