@@ -58,7 +58,7 @@ export default {
         date: {  },
         title: {},
         selected: {
-          'background-color': '#4A001F',
+          'background-color': '#5A1733',
           'border-color': '#E6AF2E',
           'box-shadow': '0px 0px 0px 5px #A8060C',
           'border-width': '1px'

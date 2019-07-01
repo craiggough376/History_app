@@ -22,6 +22,7 @@ methods: {
 
 <style lang="css" scoped>
 img {
-  width: 90%;
+  max-height: 200px;
+  max-width: 350px;
 }
 </style>
