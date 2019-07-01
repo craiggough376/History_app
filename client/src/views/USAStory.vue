@@ -2,7 +2,7 @@
   <div>
   <h1>The Civil War</h1>
   <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
-  <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+  <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
 
@@ -23,6 +23,25 @@ export default {
   components: {
     "timeline": Timeline,
     "map-box": MapBox
+  },
+  data() {
+    return {
+      boxWidth: 8,
+      inheritedStyle: {
+        box: {},
+        branch: {},
+        grid: {},
+        timeline: {},
+        boundaries: {},
+        date: {},
+        title: {},
+        selected: {}
+      },
+      dateBreadth: {
+        start: '1981',
+        end: '1988'
+      }
+    }
   }
 }
 </script>
