@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
 <h1>The Roman Empire</h1>
-<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
 <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
@@ -40,7 +40,9 @@ export default {
       dateBreadth: {
         start: '1981',
         end: '1988'
-      }
+      },
+      mapUrl: 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
+      center: [41.01649883461313, 14.229094522985932]
     }
   }
 }

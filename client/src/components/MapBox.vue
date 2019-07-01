@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
-   <l-tile-layer :url="url"></l-tile-layer>
-   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
-     <l-popup ref="popup" class="popup">
+   <l-tile-layer :url="mapUrl"></l-tile-layer>
+   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']" ref="marker">
+     <l-popup  ref="popup" class="popup" >
        <event :event ="events[this.index]" />
      </l-popup>
    </l-marker>
@@ -20,7 +20,7 @@ import Event from './Event.vue'
 
 export default {
   name: "map-box",
-  props: ["events"],
+  props: ["events", "mapUrl", "center"],
   methods: {
     showCoordinates(ev){
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
@@ -43,7 +43,12 @@ export default {
       this.index = 0
       this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
       eventBus.$emit('new event selected', this.index)
-      // this.$refs.map.mapObject.openPopup()
+      // let beginRef = this.events[this.index];
+      // this.$refs.marker[0].mapObject.openPopup()
+      // console.log(this.$refs.marker)
+
+      // let selectedBeerRef = this.selectedBeer.fields.id;
+      // this.$refs[selectedBeerRef][0].mapObject.openPopup()
     },
     jumpToEvent(indexSelected){
       this.index = indexSelected
@@ -53,27 +58,25 @@ export default {
   data(){
     return{
       zoom:4,
-      center: L.latLng(50.51342652633956, 13.0078125),
-      url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      marker: L.latLng(47.413220, -1.219482),
+      marker: [47.413220, -1.219482],
       index: null,
       map: null,
       places: [
         {
           "title": "London",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(51.413220, -1.219482)
+          "coordinates": [51.413220, -1.219482]
         },
         {
           "title": "France",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(46.413220, -1.219482)
+          "coordinates": [46.413220, -1.219482]
         },
         {
           "title": "Spain",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(40.413220, -1.219482)
+          "coordinates": [40.413220, -1.219482]
         }
       ]
     }
@@ -92,16 +95,18 @@ export default {
 <style lang="css" scoped>
 
 .map{
+
   height: 60vh;
-  width: 70vw;
+  width: 90vw;
   margin: auto;
   margin-bottom: 30px
 }
 
 .popup{
-  width: 300px;
-height: 150px;
-overflow: scroll;
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  font-size: 7;
 }
 
 </style>

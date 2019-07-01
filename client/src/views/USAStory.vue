@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
   <h1>The Civil War</h1>
-  <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+  <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
   <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
@@ -40,7 +40,9 @@ export default {
       dateBreadth: {
         start: '1981',
         end: '1988'
-      }
+      },
+      mapUrl: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+      center: [39.804755362523224, -99.16197449275398]
     }
   }
 }
