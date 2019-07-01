@@ -47,7 +47,20 @@ mounted(){
   text-align: center;
   color: #2c3e50;
   margin: 0px;
-  padding: 0px;
-  margin-top: 5px;
+  margin-top: 0px;
+}
+nav {
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: grey;
+  color: white;
+}
+a {
+  color: white;
+}
+body {
+  margin: 0px;
+  /* padding-bottom: 10px; */
 }
 </style>

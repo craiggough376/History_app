@@ -3,10 +3,10 @@
   <div class="grid" :style="gridStyle">
     <div class="start-date" :style="inheritedStyle.boundaries">{{dateBreadth.start}}</div>
     <div class="end-date" :style="inheritedStyle.boundaries">{{dateBreadth.end}}</div>
-    <div class="timeline" :style="inheritedStyle.boundaries"></div>
+    <div class="timeline" :style="inheritedStyle.timeline"></div>
     <div v-for="(episode, index) in events" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
-      <p :style="inheritedStyle.boundaries"><em>{{episode.date}}</em></p>
-      <p class="title" :style="inheritedStyle.boundaries">{{episode.title}}</p>
+      <p class="date" :style="inheritedStyle.date">{{episode.date}}</p>
+      <p class="title" :style="inheritedStyle.title">{{episode.title}}</p>
     </div>
     <div v-for="(episode, index) in events" :class="'episode'+index+'branch'" :style="branches[index]" style="">
     </div>
@@ -49,13 +49,13 @@ export default {
           'grid-column': '',
           'grid-row': '1/3',
           overflow: 'scroll',
-          'box-shadow': '1px 1px black'
+          'box-shadow': '1px 1px black',
+          'padding': '1px'
         }
 
         Object.assign(baseStyle, this.inheritedStyle.box)
         if(i == this.selectedEpisode){
           baseStyle['background-color'] = this.highlightColor
-          baseStyle['box-shadow'] = '1px 1px navy'
           baseStyle['border-color'] = 'navy'
           baseStyle['font-weight'] = 'bold'
           Object.assign(baseStyle, this.inheritedStyle.selected)
@@ -110,7 +110,7 @@ export default {
   grid-template-rows: repeat(6, 1fr);
   margin: auto;
   height: 200px;
-  width: 98%;
+  width: 95%;
   border: 1px solid black;
   padding: 10px;
   border-radius: 1em;
@@ -136,5 +136,8 @@ p {
   font-size: 0.8rem;
 }
 
+.date {
+  font-size: 0.9rem;
+}
 
 </style>

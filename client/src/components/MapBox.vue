@@ -8,10 +8,11 @@
      </l-popup>
    </l-marker>
  </l-map>
+ <div class="buttons">
+   <button v-on:click="handlePreviousClick">Previous</button>
  <button v-on:click="beginJourney">Begin</button>
- <button v-on:click="handlePreviousClick">Previous</button>
  <button v-on:click="handleNextClick">Next</button>
-
+</div>
   </div>
 </template>
 
@@ -93,18 +94,27 @@ export default {
 <style lang="css" scoped>
 
 .map{
-  height: 60vh;
-  width: 80vw;
+  height: 50vh;
+  width: 60vw;
   margin: auto;
   margin-bottom: 10px;
   padding-bottom: 20px;
-  border: 1px solid black;
 }
 
 .popup{
   width: 300px;
 height: 150px;
 overflow: scroll;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+button {
+  font-size: 0.83rem;
 }
 
 </style>

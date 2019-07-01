@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-<h2>{{event.location}}</h2>
+<h2>{{event.title}}</h2>
 <p>{{event.blurb}}</p>
 <img :src="event.image"/>
 </div>
@@ -21,4 +21,7 @@ methods: {
 </script>
 
 <style lang="css" scoped>
+img {
+  width: 90%;
+}
 </style>
