@@ -9,7 +9,7 @@ db.events.insertMany([
     "blurb": "",
     "location": "Poland",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [52.21065456233482, 20.994053508327696]
   },
   {
     "tag": "WW2",
@@ -396,5 +396,5 @@ db.events.insertMany([
 //   "image": ""
 // }
 
-]);
+
 ])

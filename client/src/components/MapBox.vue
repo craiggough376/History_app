@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
-   <l-tile-layer :url="url"></l-tile-layer>
+   <l-tile-layer :url="mapUrl"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']" ref="marker">
      <l-popup  ref="popup" class="popup" >
        <event :event ="events[this.index]" />
@@ -20,7 +20,7 @@ import Event from './Event.vue'
 
 export default {
   name: "map-box",
-  props: ["events"],
+  props: ["events", "mapUrl", "center"],
   methods: {
     showCoordinates(ev){
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
@@ -58,8 +58,6 @@ export default {
   data(){
     return{
       zoom:4,
-      center: [50.51342652633956, 13.0078125],
-      url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: [47.413220, -1.219482],
       index: null,

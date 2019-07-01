@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
   <h1>World War 2</h1>
-  <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+  <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
   <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
@@ -40,7 +40,10 @@ export default {
       dateBreadth: {
         start: '1981',
         end: '1988'
-      }
+      },
+      mapUrl: 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png',
+      center: [50.51342652633956, 13.0078125]
+      // mapUrl: 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png'
     }
   }
 }
