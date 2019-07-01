@@ -32,7 +32,9 @@ export default {
         branch: {},
         grid: {},
         timeline: {},
-        boundaries: {}
+        boundaries: {},
+        date: {},
+        title: {}
       }
     }
   }
