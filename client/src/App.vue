@@ -5,11 +5,11 @@
       | <router-link :to="{ name: 'rome-story' }">Roman Empire</router-link>
       | <router-link :to="{ name: 'ww2-story' }">WW2</router-link>
       | <router-link :to="{ name: 'usa-story' }">Civil War</router-link>
-
     </nav>
-    
+
     <div class="">
     <router-view id="view" :events="events"></router-view>
+
   </div>
     </div>
 
