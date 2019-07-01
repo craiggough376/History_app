@@ -34,7 +34,8 @@ export default {
         timeline: {},
         boundaries: {},
         date: {},
-        title: {}
+        title: {},
+        selected: {}
       }
     }
   }

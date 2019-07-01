@@ -44,7 +44,6 @@ export default {
     ],
     boxWidth: 8,
     boxGap: 1,
-    highlightColor: 'lightcyan',
     gridsize: 100,
     dateBreadth: {
       start: '1981',
@@ -85,6 +84,7 @@ export default {
           baseStyle['box-shadow'] = '1px 1px navy'
           baseStyle['border-color'] = 'navy'
           baseStyle['font-weight'] = 'bold'
+          Object.assign(baseStyle, this.inheritedStyle.selected)
         }
         stylesArray.push(baseStyle);
         if(i % 2 == 1){
