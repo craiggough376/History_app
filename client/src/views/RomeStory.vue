@@ -1,8 +1,9 @@
 <template lang="html">
   <div class="all">
-<h1>THE FALL OF THE ROMAN REPUBLIC</h1>
-<div class="map-container">
-<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+  <h1>THE FALL OF THE ROMAN REPUBLIC</h1>
+  <div class="map-container">
+<h1>The Roman Empire</h1>
+<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
 </div>
 <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
@@ -42,9 +43,17 @@ export default {
         selected: {}
       },
       dateBreadth: {
+<<<<<<< HEAD
         start: '82 BC',
         end: '27 BC'
       }
+=======
+        start: '1981',
+        end: '1988'
+      },
+      mapUrl: 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
+      center: [41.01649883461313, 14.229094522985932]
+>>>>>>> develop
     }
   }
 }
