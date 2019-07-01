@@ -43,27 +43,27 @@ export default {
   data(){
     return{
       zoom:4,
-      center: L.latLng(50.51342652633956, 13.0078125),
+      center: [50.51342652633956, 13.0078125],
       url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      marker: L.latLng(47.413220, -1.219482),
+      marker: [47.413220, -1.219482],
       index: null,
       map: null,
       places: [
         {
           "title": "London",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(51.413220, -1.219482)
+          "coordinates": [51.413220, -1.219482]
         },
         {
           "title": "France",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(46.413220, -1.219482)
+          "coordinates": [46.413220, -1.219482]
         },
         {
           "title": "Spain",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": L.latLng(40.413220, -1.219482)
+          "coordinates": [40.413220, -1.219482]
         }
       ]
     }
@@ -77,15 +77,11 @@ export default {
 <style lang="css" scoped>
 
 .map{
-<<<<<<< HEAD
-  height: 70vh;
-  width: 70vw;
-=======
+
   height: 60vh;
   width: 70vw;
   margin: auto;
   margin-bottom: 30px
->>>>>>> develop
 }
 
 .popup{
