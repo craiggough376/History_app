@@ -13,7 +13,7 @@ import MapBox from '@/components/MapBox.vue'
 export default {
   props: ["events", 'selectedEpisode'],
   computed: {
-    filtererdEvents(){
+    filteredEvents(){
     const results =  this.events.filter((event) => {
       return event.tag == "Rome"
     })
