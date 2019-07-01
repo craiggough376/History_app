@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'timeline',
   data() {
     return {
       episodes: [
@@ -31,9 +32,9 @@ export default {
       {date: 1986, title: "This happened in another time"},
       {date: 1986, title: "This happened in another time"},
       {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
+      {date: 1986, title: "This happened in another time"},
       // {date: 1986, title: "This happened in another time"},
       // {date: 1986, title: "This happened in another time"},
       // {date: 1986, title: "This happened in another time"},
@@ -61,12 +62,10 @@ export default {
     },
     styles() {
       const noOfEpisodes = this.episodes.length
-      console.log(noOfEpisodes)
       let episodeGap = Math.floor((this.gridsize + noOfEpisodes)/(noOfEpisodes))
       if(episodeGap <2){
         episodeGap = 2;
       }
-      console.log(episodeGap)
       const stylesArray = []
       let startingColumn = 2
       let endingColumn = startingColumn + this.boxWidth
@@ -140,15 +139,15 @@ export default {
   /* grid-template-columns: repeat(50, 1fr); */
   grid-template-rows: repeat(6, 1fr);
   margin: auto;
-  height: 280px;
+  height: 200px;
   width: 90%;
   border: 1px solid blue;
   padding: 10px;
   border-radius: 1em;
 }
-.box {
+/* .box {
   border: 2px solid black;
-}
+} */
 .start-date {
   grid-column: 1 / 3;
   grid-row: 4 / 5;
