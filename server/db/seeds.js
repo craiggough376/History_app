@@ -18,8 +18,7 @@ db.events.insertMany([
     "blurb": "Pompey, an ambitious young man, bucks tradition by gaining political powers before his age should allow, and puts down a rebellion in Hispania",
     "location": "Spain",
     "image": "",
-    "lat": 1,
-    "long": 1
+    "coordinates": [1, 1]
   },
   {
     "tag": "Rome",
@@ -28,8 +27,7 @@ db.events.insertMany([
     "blurb": "Crassus, richest man in the republic, crushes the slave uprising, only for Pompey to swoop in and steal the glory.",
     "location": "Glasgow",
     "image": "Petelia, Italy",
-    "lat": 1,
-    "long": 1
+    "coordinates": [1, 1]
   },
   {
     "tag": "Rome",
@@ -38,8 +36,43 @@ db.events.insertMany([
     "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
     "location": "Rome",
     "image": "",
-    "lat": 1,
-    "long": 1
+    "coordinates": [1, 1]
+  },
+  {
+    "tag": "Rome",
+    "title": "Caesar conquers Gaul",
+    "date": "58-50BC",
+    "blurb": "Over a series of grueling campaigns, Julius Caesar leads Roman forces to victory over the tribes of Gaul, bringing the entire region under the control of the Roman empire",
+    "location": "Gaul",
+    "image": "",
+    "coordinates": [1, 1]
+  },
+  {
+    "tag": "Rome",
+    "title": "Crassus Dies",
+    "date": "53BC",
+    "blurb": "Crassus, desperate to finally gain military glory and a triumph (military parade) perishes in battle trying conquer Parthia",
+    "location": "Rome",
+    "image": "",
+    "coordinates": [1, 1]
+  },
+  {
+    "tag": "Rome",
+    "title": "Caesar crosses the Rubicon",
+    "date": "60BC",
+    "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
+    "location": "Rome",
+    "image": "",
+    "coordinates": [1, 1]
+  },
+  {
+    "tag": "Rome",
+    "title": "First Triumverate",
+    "date": "60BC",
+    "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
+    "location": "Rome",
+    "image": "",
+    "coordinates": [1, 1]
   },
   {
   "tag": "Civil War",
