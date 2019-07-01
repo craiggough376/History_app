@@ -52,7 +52,7 @@ export default {
     }
     }
   },
-  props: ['selectedEpisode'],
+  props: ['selectedEpisode', "events"],
   computed: {
     gridStyle(){
       return {

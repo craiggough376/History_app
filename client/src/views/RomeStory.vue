@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
 <h1>The Roman Empire</h1>
-<map-box :selectedEpisode="selectedEpisode"/>
-<timeline :selectedEpisode="selectedEpisode" />
+<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+<timeline :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
 </div>
 </template>
 

@@ -20,6 +20,7 @@ import Event from './Event.vue'
 
 export default {
   name: "map-box",
+  props: ["events"],
   methods: {
     showCoordinates(ev){
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
