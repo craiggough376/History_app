@@ -12,12 +12,11 @@
     </div>
     <div class="test"></div>
   </div>
-  <button v-on:click="handlePrevious">Previous</button>
-  <button v-on:click="handleNext">Next</button>
 </div>
 </template>
 
 <script>
+import {eventBus} from '../main.js'
 export default {
   name: 'timeline',
   data() {
@@ -45,7 +44,6 @@ export default {
     ],
     boxWidth: 8,
     boxGap: 1,
-    selectedEpisode: 0,
     highlightColor: 'lightcyan',
     gridsize: 100,
     dateBreadth: {
@@ -54,6 +52,7 @@ export default {
     }
     }
   },
+  props: ['selectedEpisode'],
   computed: {
     gridStyle(){
       return {
@@ -115,18 +114,10 @@ export default {
     }
   },
   methods: {
-    handleNext() {
-      if(this.selectedEpisode < this.episodes.length -1){
-        this.selectedEpisode += 1
-      }
-    },
-    handlePrevious() {
-      if(this.selectedEpisode > 0){
-        this.selectedEpisode -= 1
-      }
-    },
     handleClick(index) {
-      this.selectedEpisode = index
+      // this.selectedEpisode = this.index
+      eventBus.$emit('new event selected', index)
+      eventBus.$emit('event clicked', (index))
     }
   }
 
@@ -162,44 +153,5 @@ export default {
   grid-row: 3 / 4;
 }
 
-
-/* .episodedown {
-  border: 1px solid black;
-  grid-column: 4/8;
-  grid-row: 7/9;
-  overflow: scroll;
-} */
-
-/* .episodedownbranch {
-  border-right: 1px solid black;
-  grid-column: 5/5;
-  grid-row: 6/7
-
-} */
-
-/* .episode0{
-  border: 1px solid black;
-  grid-column: 2/10;
-  grid-row: 2/4;
-  overflow: scroll;
-} */
-/* .episode0branch{
-  border-right: 1px solid black;
-  grid-column: 5/5;
-  grid-row: 4/6;
-} */
-/* .episode1{
-  border: 1px solid black;
-  grid-column: 12/20;
-  grid-row: 2/4;
-} */
-/* .episodexbranch{
-  border-right: 1px solid black;
-  grid-column: 47/47;
-  grid-row: 5/6;
-} */
-p{
-  margin: 0px;
-}
 
 </style>

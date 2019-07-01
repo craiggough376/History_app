@@ -6,6 +6,8 @@ import { LMap, LTileLayer, LMarker, LPopup } from 'vue2-leaflet';
 import { Icon } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
+export const eventBus = new Vue();
+
 Vue.config.productionTip = false
 
 Vue.component('l-map', LMap);

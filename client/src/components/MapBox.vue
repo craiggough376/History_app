@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
+
 export default {
   name: "map-box",
   methods: {
@@ -23,21 +25,28 @@ export default {
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
   },
     handleNextClick(){
-      if ((this.index > -1) && (this.index < 2)){
+      if ((this.index > -1) && (this.index + 1 < this.places.length )){
           this.index ++
           this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          eventBus.$emit('new event selected', this.index)
       }
     },
     handlePreviousClick(){
-      if ((this.index > 0) && (this.index < 3)){
+      if ((this.index > 0) && (this.index < this.places.length)){
           this.index --
           this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          eventBus.$emit('new event selected', this.index)
       }
     },
     beginJourney(){
       this.index = 0
       this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+      eventBus.$emit('new event selected', this.index)
       // this.$refs.map.mapObject.openPopup()
+    },
+    jumpToEvent(indexSelected){
+      this.index = indexSelected
+      this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
     }
   },
   data(){
@@ -69,7 +78,9 @@ export default {
     }
   },
   mounted(){
-
+    eventBus.$on('event clicked', (payload) => {
+      this.jumpToEvent(payload)
+    })
   }
 }
 </script>
