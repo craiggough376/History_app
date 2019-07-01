@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import Timeline from './components/Timeline.vue'
-import MapBox from './components/MapBox.vue'
 
 export default {
   name: 'app',
