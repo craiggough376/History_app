@@ -1,12 +1,12 @@
 <template lang="html">
 <div>
   <div class="grid" :style="gridStyle">
-    <div class="start-date">{{dateBreadth.start}}</div>
-    <div class="end-date">{{dateBreadth.end}}</div>
-    <div class="timeline"></div>
+    <div class="start-date" :style="inheritedStyle.boundaries">{{dateBreadth.start}}</div>
+    <div class="end-date" :style="inheritedStyle.boundaries">{{dateBreadth.end}}</div>
+    <div class="timeline" :style="inheritedStyle.boundaries"></div>
     <div v-for="(episode, index) in events" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
-      <p>{{episode.date}}</p>
-      <p>{{episode.title}}</p>
+      <p :style="inheritedStyle.boundaries"><em>{{episode.date}}</em></p>
+      <p class="title" :style="inheritedStyle.boundaries">{{episode.title}}</p>
     </div>
     <div v-for="(episode, index) in events" :class="'episode'+index+'branch'" :style="branches[index]" style="">
     </div>
@@ -44,7 +44,6 @@ export default {
     ],
     boxWidth: 8,
     boxGap: 1,
-    highlightColor: 'lightcyan',
     gridsize: 100,
     dateBreadth: {
       start: '1981',
@@ -52,12 +51,14 @@ export default {
     }
     }
   },
-  props: ['selectedEpisode', "events"],
+  props: ['selectedEpisode', "events", "inheritedStyle", "boxWidth"],
   computed: {
     gridStyle(){
-      return {
+       const style = {
         'grid-template-columns': 'repeat(' + this.gridsize + ', 1fr)'
       }
+      Object.assign(style, this.inheritedStyle.grid)
+      return style
     },
     styles() {
       const noOfEpisodes = this.events.length
@@ -76,11 +77,14 @@ export default {
           overflow: 'scroll',
           'box-shadow': '1px 1px black'
         }
+
+        Object.assign(baseStyle, this.inheritedStyle.box)
         if(i == this.selectedEpisode){
           baseStyle['background-color'] = this.highlightColor
           baseStyle['box-shadow'] = '1px 1px navy'
           baseStyle['border-color'] = 'navy'
           baseStyle['font-weight'] = 'bold'
+          Object.assign(baseStyle, this.inheritedStyle.selected)
         }
         stylesArray.push(baseStyle);
         if(i % 2 == 1){
@@ -103,6 +107,7 @@ export default {
           'grid-column': '',
           'grid-row': '3/4',
         }
+        Object.assign(baseStyle, this.inheritedStyle.branch)
         stylesArray.push(baseStyle);
         stylesArray[i]['grid-column'] = column + '/' + column;
         if(i % 2 == 1){
