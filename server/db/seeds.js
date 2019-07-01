@@ -8,7 +8,7 @@ db.events.insertMany([
     "date": '82 BC',
     "blurb": "Sulla defeats Marius in a civil war, becoming dictator-for-life. He purges his political enemies, and attempts to shore up the laws to prevent any one man from gaining too much power. He retires two years later.",
     "location": "Rome",
-    "image": "",
+    "image": "https://www.globalsecurity.org/military/world/spqr/images/spqr-sulla.jpg",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
@@ -17,7 +17,7 @@ db.events.insertMany([
     "date": '71 BC',
     "blurb": "Pompey, an ambitious young man, bucks tradition by gaining political powers before his age should allow, and puts down a rebellion in Hispania.",
     "location": "Spain",
-    "image": "",
+    "image": "https://i.pinimg.com/originals/35/61/99/356199bcd3ca17138792d971f81415b6.jpg",
     "coordinates": [40.215856421088205, -3.0723066655184206]
   },
   {
@@ -26,7 +26,7 @@ db.events.insertMany([
     "date": "70 BC",
     "blurb": "Crassus, richest man in the republic, crushes the slave uprising, only for Pompey to swoop in and steal the glory.",
     "location": "Petelia, Italy",
-    "image": "",
+    "image": "https://www.historynet.com/wp-content/uploads/2006/07/Spartacus_by_Hermann_Vogel.jpg",
     "coordinates": [40.74490425886839, 15.231585527263018]
   },
   {
@@ -35,7 +35,7 @@ db.events.insertMany([
     "date": "60BC",
     "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
     "location": "Rome",
-    "image": "",
+    "image": "https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/9329214/imgres-1.jpg",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
@@ -44,7 +44,7 @@ db.events.insertMany([
     "date": "58-50BC",
     "blurb": "Over a series of grueling campaigns, Julius Caesar leads Roman forces to victory over the tribes of Gaul, bringing the entire region under the control of the Roman empire.",
     "location": "Gaul",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Siege-alesia-vercingetorix-jules-cesar.jpg/1920px-Siege-alesia-vercingetorix-jules-cesar.jpg",
     "coordinates": [46.99442304913762, 2.0358906061617215]
   },
   {
@@ -53,7 +53,7 @@ db.events.insertMany([
     "date": "53BC",
     "blurb": "Crassus, desperate to finally gain military glory and a triumph (military parade) perishes in battle trying conquer Parthia.",
     "location": "Parthia",
-    "image": "",
+    "image": "https://images.fineartamerica.com/images-medium-large/death-of-crassus-at-carrhae-against-photo-researchers.jpg",
     "coordinates": [37.18366358299065, 38.19188385062329]
   },
   {
@@ -62,7 +62,7 @@ db.events.insertMany([
     "date": "49BC",
     "blurb": "Caesar, in Gaul, is ordered to disband his legion and return to Rome by the senate. In crossing the Rubicon river, the senate declares his actions an act of war, and Rome is in conflict with itself yet again.",
     "location": "Italy",
-    "image": "",
+    "image": "http://clba.org/wp-content/uploads/2018/09/Caesar-1080x675.jpg",
     "coordinates": [44.0885196319852, 12.393019607549201]
   },
   {
@@ -71,7 +71,7 @@ db.events.insertMany([
     "date": "48BC",
     "blurb": "After suffering several defeats at the hand of Julius Caesar, Pompey flees to Egypt looking for aid. An officer of Ptolemy strikes him down, by the order of the king of Egypt.",
     "location": "Egypt",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/Caesar-07.jpg",
     "coordinates": [31.157987962433836, 32.43867217775794]
   },
   {
@@ -80,7 +80,7 @@ db.events.insertMany([
     "date": "44BC",
     "blurb": "Caesar rules Rome as defacto dictator, taking on more and more powers to himself. He is betrayed by his friend Brutus, cornered and stabbed by a group of concerned senators.",
     "location": "Rome",
-    "image": "",
+    "image": "https://cdn.vox-cdn.com/thumbor/MnXj3KNjD9rw7j8OObK-cBXzBQk=/230x145:1575x1154/1200x800/filters:focal(230x145:1575x1154)/cdn.vox-cdn.com/uploads/chorus_image/image/45894920/deathofcaesar.0.0.jpg",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
@@ -89,7 +89,7 @@ db.events.insertMany([
     "date": "43BC",
     "blurb": "Julius Caesar's young heir, Octavian, joins forces with Mark Anthony and Lepidus to combat Brutus's forces.",
     "location": "Rome",
-    "image": "",
+    "image": "http://augustusnhd.weebly.com/uploads/4/7/7/4/47744177/8189408_orig.jpg",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
@@ -98,7 +98,7 @@ db.events.insertMany([
     "date": "42BC",
     "blurb": "Mark Anthony and Octavian defeat Brutus at the battle of Phillipi. Brutus commits suicide before he can be captured.",
     "location": "Macedon",
-    "image": "",
+    "image": "https://i.ytimg.com/vi/mjWlGf3ynnQ/hqdefault.jpg",
     "coordinates": [41.016940813939264, 24.310023261479895]
   },
   {
@@ -107,7 +107,7 @@ db.events.insertMany([
     "date": "33BC",
     "blurb": "Octavian and Mark Anthony officially break the triumverate, with Anthony allying with Egypt under the control of his lover, Cleopatra.",
     "location": "Egypt",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Sir_Lawrence_Alma-Tadema_-_The_Meeting_of_Antony_and_Cleopatra.jpg/1920px-Sir_Lawrence_Alma-Tadema_-_The_Meeting_of_Antony_and_Cleopatra.jpg",
     "coordinates": [31.14662305260475, 29.90453285798097]
   },
   {
@@ -116,7 +116,7 @@ db.events.insertMany([
     "date": "31BC",
     "blurb": "Mark Anthony and Cleopatra are defeated by Octavian at the sea battle of Actium. After fleeing both commit suicide.",
     "location": "Actium",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Castro_Battle_of_Actium.jpg",
     "coordinates": [38.943921989226524, 20.75927140422824]
   },
   {
@@ -125,7 +125,7 @@ db.events.insertMany([
     "date": "27BC",
     "blurb": "Octavian is name Caesar August, Emperor of Rome. The Roman Republic finally falls.",
     "location": "Rome",
-    "image": "",
+    "image": "https://i2.wp.com/www.military-history.org/wp-content/uploads/2010/09/Augustus-Caesar.png?resize=423%2C308",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
