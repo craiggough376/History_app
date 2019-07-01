@@ -43,9 +43,9 @@ db.events.insertMany([
     "latitude":
   },
   {
-    "tag": "Him",
-    "title": "Tim has a podcast",
-    "date": 2,
+    "tag": "Rome",
+    "title": "",
+    "date": "",
     "blurb": "Im going to listen to tims podcast",
     "location": "Glasgow",
     "image": "",
