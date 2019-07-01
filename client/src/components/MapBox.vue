@@ -2,9 +2,9 @@
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="url"></l-tile-layer>
-   <l-marker v-if="index != null ":lat-lng="places[index]['coordinates']">
+   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
      <l-popup ref="popup" class="popup">
-       <event :event ="places[this.index]" />
+       <event :event ="events[this.index]" />
      </l-popup>
    </l-marker>
  </l-map>
@@ -26,28 +26,28 @@ export default {
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
   },
     handleNextClick(){
-      if ((this.index > -1) && (this.index + 1 < this.places.length )){
+      if ((this.index > -1) && (this.index + 1 < this.events.length )){
           this.index ++
-          this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
           eventBus.$emit('new event selected', this.index)
       }
     },
     handlePreviousClick(){
-      if ((this.index > 0) && (this.index < this.places.length)){
+      if ((this.index > 0) && (this.index < this.events.length)){
           this.index --
-          this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
           eventBus.$emit('new event selected', this.index)
       }
     },
     beginJourney(){
       this.index = 0
-      this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+      this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
       eventBus.$emit('new event selected', this.index)
       // this.$refs.map.mapObject.openPopup()
     },
     jumpToEvent(indexSelected){
       this.index = indexSelected
-      this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+      this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
     }
   },
   data(){
