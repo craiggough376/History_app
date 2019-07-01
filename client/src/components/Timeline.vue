@@ -4,11 +4,11 @@
     <div class="start-date">{{dateBreadth.start}}</div>
     <div class="end-date">{{dateBreadth.end}}</div>
     <div class="timeline"></div>
-    <div v-for="(episode, index) in episodes" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
+    <div v-for="(episode, index) in events" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
       <p>{{episode.date}}</p>
       <p>{{episode.title}}</p>
     </div>
-    <div v-for="(episode, index) in episodes" :class="'episode'+index+'branch'" :style="branches[index]" style="">
+    <div v-for="(episode, index) in events" :class="'episode'+index+'branch'" :style="branches[index]" style="">
     </div>
     <div class="test"></div>
   </div>
@@ -60,7 +60,7 @@ export default {
       }
     },
     styles() {
-      const noOfEpisodes = this.episodes.length
+      const noOfEpisodes = this.events.length
       let episodeGap = Math.floor((this.gridsize + noOfEpisodes)/(noOfEpisodes))
       if(episodeGap <2){
         episodeGap = 2;
@@ -93,11 +93,11 @@ export default {
       return stylesArray
     },
     branches() {
-      const noOfEpisodes = this.episodes.length
+      const noOfEpisodes = this.events.length
       const episodeGap = Math.floor((this.gridsize + noOfEpisodes)/(noOfEpisodes))
       const stylesArray = []
       let column = 1 + this.boxWidth/2
-      for(let i=0; i < this.episodes.length; i++){
+      for(let i=0; i < this.events.length; i++){
         const baseStyle = {
           'border-right': '1px solid black',
           'grid-column': '',
@@ -151,6 +151,10 @@ export default {
   border-bottom: 3px dashed black;
   grid-column: 3 / 98;
   grid-row: 3 / 4;
+}
+p {
+  margin: 0px;
+  font-size: 0.8rem;
 }
 
 
