@@ -2,8 +2,8 @@
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="mapUrl"></l-tile-layer>
-   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']" ref="marker">
-     <l-popup  ref="popup" class="popup" >
+   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
+     <l-popup ref="popup" class="popup">
        <event :event ="events[this.index]" />
      </l-popup>
    </l-marker>
@@ -44,12 +44,7 @@ export default {
       this.index = 0
       this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
       eventBus.$emit('new event selected', this.index)
-      // let beginRef = this.events[this.index];
-      // this.$refs.marker[0].mapObject.openPopup()
-      // console.log(this.$refs.marker)
-
-      // let selectedBeerRef = this.selectedBeer.fields.id;
-      // this.$refs[selectedBeerRef][0].mapObject.openPopup()
+      // this.$refs.map.mapObject.openPopup()
     },
     jumpToEvent(indexSelected){
       this.index = indexSelected
@@ -59,25 +54,27 @@ export default {
   data(){
     return{
       zoom:4,
+      center: L.latLng(50.51342652633956, 13.0078125),
+      url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      marker: [47.413220, -1.219482],
+      marker: L.latLng(47.413220, -1.219482),
       index: null,
       map: null,
       places: [
         {
           "title": "London",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": [51.413220, -1.219482]
+          "coordinates": L.latLng(51.413220, -1.219482)
         },
         {
           "title": "France",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": [46.413220, -1.219482]
+          "coordinates": L.latLng(46.413220, -1.219482)
         },
         {
           "title": "Spain",
           "blurb": "Blah Blah Blah Blah",
-          "coordinates": [40.413220, -1.219482]
+          "coordinates": L.latLng(40.413220, -1.219482)
         }
       ]
     }
@@ -96,9 +93,8 @@ export default {
 <style lang="css" scoped>
 
 .map{
-
   height: 60vh;
-  width: 90vw;
+  width: 70vw;
   margin: auto;
   margin-bottom: 10px;
   padding-bottom: 20px;
@@ -106,10 +102,9 @@ export default {
 }
 
 .popup{
-  width: 400px;
-  height: 200px;
-  overflow: scroll;
-  font-size: 7;
+  width: 300px;
+height: 150px;
+overflow: scroll;
 }
 
 </style>

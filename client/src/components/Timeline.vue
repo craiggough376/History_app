@@ -110,7 +110,7 @@ export default {
   grid-template-rows: repeat(6, 1fr);
   margin: auto;
   height: 200px;
-  width: 90%;
+  width: 98%;
   border: 1px solid black;
   padding: 10px;
   border-radius: 1em;

@@ -46,12 +46,6 @@ mounted(){
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-<<<<<<< HEAD
   margin-top: 5px;
-=======
-  margin-top: 60px;
-  /* display: flex;
-  align-items: center; */
->>>>>>> develop
 }
 </style>
