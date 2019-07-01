@@ -48,7 +48,7 @@ db.events.insertMany([
     "blurb": "Slavery arrived in North America along side the Spanish and English colonists of the 17th and 18th centuries, with an estimated 645,000 Africans imported during the more than 250 years the institution was legal.",
     "location": "Alabama",
     "image": "http://icnacsj.org/wp-content/uploads/2016/03/Slavery.jpg",
-    "coordinates": [32.32596293360209 , -86.8045790117278]
+    "coordinates": [32.624428528029995, -446.64248904679516]
   },
   {
   "tag": "Civil War",
@@ -57,7 +57,7 @@ db.events.insertMany([
   "blurb": "In the growth years following the 1803 Louisiana Purchase, Congress was compelled to establish a policy to guide the expansion of slavery into the new western territory.",
   "location": "Missouri",
   "image": "https://www.history.com/.image/t_share/MTYyMjk5NzUyMTE1ODczNjkz/missouri-compromise.jpg",
-  "coordinates": [40.548594, -92.54050672030989]
+  "coordinates": [38.2317623450261, -452.74296726914594]
 },
 {
   "tag": "Civil War",
@@ -66,7 +66,7 @@ db.events.insertMany([
   "blurb": "TIn August of 1831, a slave named Nat Turner incited an uprising that spread through several plantations in southern Virginia.  Turner and approximately seventy cohorts killed around sixty white people.",
   "location": "Viginia",
   "image": "https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/nat-turner_0.jpg?itok=1Wnxd4fg",
-  "coordinates": [73.478184, -78.51796748191411]
+  "coordinates": [37.36827230453463, -438.6290064839308]
 },
 {
   "tag": "Civil War",
@@ -75,7 +75,7 @@ db.events.insertMany([
   "blurb": "The Wilmot Proviso was a piece of legislation proposed by David Wilmot (D-FS-R PA) at the close of the Mexican-American War.  If passed, the Proviso would have outlawed slavery in territory acquired by the United States as a result of the war, which included most of the Southwest and extended all the way to California.",
   "location": "Washington",
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/David_Wilmot.png/220px-David_Wilmot.png",
-  "coordinates":[819119066, -76.80470652128858]
+  "coordinates":[38.78777138613269, -437.0478256199254]
 },
 {
   "tag": "Civil War",
@@ -84,7 +84,7 @@ db.events.insertMany([
   "blurb": "With national relations soured by the debate over the Wilmot Proviso, senators Henry Clay and Stephen Douglas managed to broker a shaky accord with the Compromise of 1850.  The compromise admitted California as a free state and did not regulate slavery in the remainder of the Mexican cession all while strengthening the Fugitive Slave Act",
   "location": "California",
   "image": "https://apprend.io/wp-content/uploads/2017/06/Compromise-of-1850-Small.jpg",
-  "coordinates": [62652953, -119.5492290037699]
+  "coordinates": [36.36071475556519, -480.01485730423553]
 },
 {
   "tag": "Civil War",
@@ -93,16 +93,7 @@ db.events.insertMany([
   "blurb": "Uncle Tom’s Cabin was the second-best-selling book in America in the 19th century, second only to the Bible.  Its popularity brought the issue of slavery to life for those few who remained unmoved after decades of legislative conflict and widened the division between North and South.",
   "location": "Georgia",
   "image": "http://prodimage.images-bn.com/pimages/2940013113671_p0_v1_s1200x630.jpg",
-  "coordinates": [04465375, -83.08906578611509]
-},
-{
-  "tag": "Civil War",
-  "title": "The Compromise of 1850",
-  "date": "1850",
-  "blurb": "With national relations soured by the debate over the Wilmot Proviso, senators Henry Clay and Stephen Douglas managed to broker a shaky accord with the Compromise of 1850.  The compromise admitted California as a free state and did not regulate slavery in the remainder of the Mexican cession all while strengthening the Fugitive Slave Act",
-  "location": "California",
-  "image": "https://apprend.io/wp-content/uploads/2017/06/Compromise-of-1850-Small.jpg",
-  "coordinates": [62652953, -119.5492290037699]
+  "coordinates": [32.294664627915154, -442.9896739711822]
 },
 {
   "tag": "Civil War",
@@ -111,7 +102,7 @@ db.events.insertMany([
   "blurb": "The Kansas-Nebraska Act of 1854 established Kansas and Nebraska as territories and set the stage for “Bleeding Kansas” by its adoption of popular sovereignty. Under popular sovereignty, it is the residents of the territories who decide by popular referendum if the state is to be a free or enslaved.",
   "location": "Kansas",
   "image": "https://unmistakablylawrence.com/wp-content/uploads/2018/07/Quantrills_Raid_on_Lawrence_Kansas._-768x520.jpg",
-  "coordinates": [68470926, -98.06911674953311]
+  "coordinates": [38.526189261405634, -458.3183440139016]
 },
 {
   "tag": "Civil War",
@@ -120,7 +111,7 @@ db.events.insertMany([
   "blurb": "Dred Scott was a Virginia slave who tried to sue for his freedom in court.  The case eventually rose to the level of the Supreme Court, where the justices found that, as a slave, Dred Scott was a piece of property that had none of the legal rights or recognitions afforded to a human being.",
   "location": "Virgina",
   "image": "https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/taney_0.jpg?itok=tUclsL4L",
-  "coordinates": [20315418, -78.56429965933485]
+  "coordinates": [37.36827230453463, -438.6290064839308]
 },
 {
   "tag": "Civil War",
@@ -129,7 +120,7 @@ db.events.insertMany([
   "blurb": "In 1858, Democratic Senator Stephen Douglas faced a challenge for his seat from a relatively unknown one term former congressmen and “prairie lawyer” Abraham Lincoln. In the campaign that followed Lincoln and Douglas engaged in seven public debates across the state of Illinois where they debated the most controversial issue of the antebellum era: slavery.",
   "location": "California",
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Lincoln_Douglas.jpg/400px-Lincoln_Douglas.jpg",
-  "coordinates": [53803992, -78.22109834510698]
+  "coordinates": [36.36071475556519, -480.01485730423553]
 },
 {
   "tag": "Civil War",
@@ -138,7 +129,7 @@ db.events.insertMany([
   "blurb": "Abolitionist John Brown supported violent action against the South to end slavery and played a major role in starting the Civil War. After the Pottawatomie Massacre during Bleeding Kansas, Brown returned to the North and plotted a far more threatening act. In October 1859, he and 19 supporters, armed with “Beecher’s Bibles,” led a raid on the federal armory and arsenal at Harpers Ferry, Virginia, in an effort to capture and confiscate the arms located there, distribute them among local slaves and begin armed insurrection. ",
   "location": "Virginia",
   "image": "https://apprend.io/wp-content/uploads/2017/06/Compromise-of-1850-Small.jpg",
-  "coordinates": [20315418, -78.56429965933485]
+  "coordinates": [37.36827230453463, -438.6290064839308]
 },
 {
   "tag": "Civil War",
@@ -147,7 +138,7 @@ db.events.insertMany([
   "blurb": "Abraham Lincoln was elected by a considerable margin in 1860 despite not being included on many Southern ballots.  As a Republican, his party’s anti-slavery outlook struck fear into many Southerners.",
   "location": "South Carolina",
   "image": "https://www.intellectualtakeout.org/sites/ito/files/lincolndouglasdebates.jpg",
-  "coordinates": [30845617, -80.85688443837702]
+  "coordinates": [33.58660056211224, -441.2767280351763]
 },
 {
   "tag": "Civil War",
@@ -156,7 +147,7 @@ db.events.insertMany([
   "blurb": "With secession, several federal forts, including Fort Sumter in South Carolina, suddenly became outposts in a foreign land.  Abraham Lincoln made the decision to send fresh supplies to the beleaguered garrisons.",
   "location": "South Carolina",
   "image": "https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/sumter_2.jpg?itok=JYrphLZz",
-  "coordinates": [30845617, -80.85688443837702]
+  "coordinates": [33.58660056211224, -441.2767280351763]
 },
 {
     "tag": "WW2",
