@@ -21,37 +21,11 @@ export default {
   name: 'timeline',
   data() {
     return {
-      episodes: [
-        {date: 1984, title: "This happened in this time a long time ago in a galaxy far far away and over and over and over"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-      // {date: 1986, title: "This happened in another time"},
-    ],
-    boxWidth: 8,
     boxGap: 1,
     gridsize: 100,
-    dateBreadth: {
-      start: '1981',
-      end: '1988'
-    }
     }
   },
-  props: ['selectedEpisode', "events", "inheritedStyle", "boxWidth"],
+  props: ['selectedEpisode', "events", "inheritedStyle", "boxWidth", "dateBreadth"],
   computed: {
     gridStyle(){
        const style = {

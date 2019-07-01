@@ -2,7 +2,7 @@
   <div>
 <h1>The Roman Empire</h1>
 <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
-<timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth"/>
+<timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
 
@@ -36,6 +36,10 @@ export default {
         date: {},
         title: {},
         selected: {}
+      },
+      dateBreadth: {
+        start: '1981',
+        end: '1988'
       }
     }
   }
