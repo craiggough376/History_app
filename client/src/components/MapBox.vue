@@ -4,8 +4,7 @@
    <l-tile-layer :url="url"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="places[index]['coordinates']">
      <l-popup ref="popup" class="popup">
-       <h1>{{places[index]['title']}}</h1>
-       <p>{{places[index]['blurb']}}</p>
+       <event :event ="places[this.index]" />
      </l-popup>
    </l-marker>
  </l-map>
@@ -17,6 +16,7 @@
 
 <script>
 import {eventBus} from '../main.js'
+import Event from './Event.vue'
 
 export default {
   name: "map-box",
@@ -81,6 +81,9 @@ export default {
     eventBus.$on('event clicked', (payload) => {
       this.jumpToEvent(payload)
     })
+  },
+  components: {
+    'event': Event
   }
 }
 </script>

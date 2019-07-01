@@ -1,6 +1,8 @@
 <template lang="html">
-
-
+  <div>
+<h3>{{event.title}}</h3>
+<p>{{event.blurb}}</p>
+</div>
 </template>
 
 <script>
