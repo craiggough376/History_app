@@ -94,7 +94,7 @@ export default {
 
 .map{
   height: 60vh;
-  width: 70vw;
+  width: 80vw;
   margin: auto;
   margin-bottom: 10px;
   padding-bottom: 20px;

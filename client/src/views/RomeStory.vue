@@ -34,7 +34,9 @@ export default {
           "font-family": "Palatino, serif"
         },
         branch: {},
-        grid: {},
+        grid: {
+          'background-color': 'white'
+        },
         timeline: {},
         boundaries: {},
         date: {},
@@ -56,6 +58,7 @@ export default {
 
  <style lang="css" scoped>
    .all {
+     margin: 0px;
      font-family: Palatino, serif;
      color: #800000;
    }
