@@ -3,36 +3,6 @@ db.dropDatabase();
 
 db.events.insertMany([
   {
-    "tag": "Me",
-    "title": "I ate a sandwich",
-    "date": 1,
-    "blurb": "Hello, i ate a sandwich.",
-    "location": "London",
-    "image": "",
-    "longitude":,
-    "latitude":
-  },
-  {
-    "tag": "Me",
-    "title": "Its sunny outside",
-    "date": 3,
-    "blurb": "Its too sunny outside",
-    "location": "Berlin",
-    "image": "",
-    "longitude":,
-    "latitude":
-  },
-  {
-    "tag": "Him",
-    "title": "Tim has a podcast",
-    "date": 2,
-    "blurb": "Im going to listen to tims podcast",
-    "location": "Glasgow",
-    "image": "",
-    "longitude":,
-    "latitude":
-  },
-  {
     "tag": "Rome",
     "title": "Sulla becomes Dictator",
     "date": '82 BC',
@@ -55,19 +25,19 @@ db.events.insertMany([
   {
     "tag": "Rome",
     "title": "The Defeat of Spartacus by Crassus",
-    "date": 2,
+    "date": "70 BC",
     "blurb": "Crassus, richest man in the republic, crushes the slave uprising, only for Pompey to swoop in and steal the glory.",
     "location": "Glasgow",
-    "image": "",
+    "image": "Petelia, Italy",
     "longitude":,
     "latitude":
   },
   {
     "tag": "Rome",
-    "title": "Tim has a podcast",
-    "date": 2,
-    "blurb": "Im going to listen to tims podcast",
-    "location": "Glasgow",
+    "title": "First Triumverate",
+    "date": "60BC",
+    "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
+    "location": "Rome",
     "image": "",
     "longitude":,
     "latitude":
