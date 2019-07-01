@@ -2,6 +2,7 @@
   <div>
 <h3>{{event.title}}</h3>
 <p>{{event.blurb}}</p>
+<img :src="event.image"/>
 </div>
 </template>
 
@@ -20,7 +21,4 @@ methods: {
 </script>
 
 <style lang="css" scoped>
-  li {
-    list-style-type: none;
-  }
 </style>

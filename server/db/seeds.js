@@ -60,7 +60,7 @@ db.events.insertMany([
     "tag": "Rome",
     "title": "Caesar crosses the Rubicon",
     "date": "60BC",
-    "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
+    "blurb": "Caesar, in Gaul, is ordered to disband his legion and return to Rome by the senate. ",
     "location": "Rome",
     "image": "",
     "coordinates": [1, 1]

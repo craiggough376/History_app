@@ -111,7 +111,7 @@ export default {
   margin: auto;
   height: 200px;
   width: 90%;
-  border: 1px solid blue;
+  border: 1px solid black;
   padding: 10px;
   border-radius: 1em;
 }
