@@ -6,28 +6,28 @@ db.events.insertMany([
     "tag": "Rome",
     "title": "Sulla becomes Dictator",
     "date": '82 BC',
-    "blurb": "Sulla defeats Marius in a civil war, becoming dictator-for-life. He purges his political enemies, and attempts to shore up the laws to prevent any one man from gaining too much power. He retires two years later",
+    "blurb": "Sulla defeats Marius in a civil war, becoming dictator-for-life. He purges his political enemies, and attempts to shore up the laws to prevent any one man from gaining too much power. He retires two years later.",
     "location": "Rome",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
     "tag": "Rome",
     "title": "The Rise of Pompey",
     "date": '71 BC',
-    "blurb": "Pompey, an ambitious young man, bucks tradition by gaining political powers before his age should allow, and puts down a rebellion in Hispania",
+    "blurb": "Pompey, an ambitious young man, bucks tradition by gaining political powers before his age should allow, and puts down a rebellion in Hispania.",
     "location": "Spain",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [40.215856421088205, -3.0723066655184206]
   },
   {
     "tag": "Rome",
     "title": "The Defeat of Spartacus by Crassus",
     "date": "70 BC",
     "blurb": "Crassus, richest man in the republic, crushes the slave uprising, only for Pompey to swoop in and steal the glory.",
-    "location": "Glasgow",
-    "image": "Petelia, Italy",
-    "coordinates": [1, 1]
+    "location": "Petelia, Italy",
+    "image": "",
+    "coordinates": [40.74490425886839, 15.231585527263018]
   },
   {
     "tag": "Rome",
@@ -36,43 +36,97 @@ db.events.insertMany([
     "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
     "location": "Rome",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
     "tag": "Rome",
     "title": "Caesar conquers Gaul",
     "date": "58-50BC",
-    "blurb": "Over a series of grueling campaigns, Julius Caesar leads Roman forces to victory over the tribes of Gaul, bringing the entire region under the control of the Roman empire",
+    "blurb": "Over a series of grueling campaigns, Julius Caesar leads Roman forces to victory over the tribes of Gaul, bringing the entire region under the control of the Roman empire.",
     "location": "Gaul",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [46.99442304913762, 2.0358906061617215]
   },
   {
     "tag": "Rome",
     "title": "Crassus Dies",
     "date": "53BC",
-    "blurb": "Crassus, desperate to finally gain military glory and a triumph (military parade) perishes in battle trying conquer Parthia",
-    "location": "Rome",
+    "blurb": "Crassus, desperate to finally gain military glory and a triumph (military parade) perishes in battle trying conquer Parthia.",
+    "location": "Parthia",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [37.18366358299065, 38.19188385062329]
   },
   {
     "tag": "Rome",
     "title": "Caesar crosses the Rubicon",
-    "date": "60BC",
-    "blurb": "Caesar, in Gaul, is ordered to disband his legion and return to Rome by the senate. ",
-    "location": "Rome",
+    "date": "49BC",
+    "blurb": "Caesar, in Gaul, is ordered to disband his legion and return to Rome by the senate. In crossing the Rubicon river, the senate declares his actions an act of war, and Rome is in conflict with itself yet again.",
+    "location": "Italy",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [44.0885196319852, 12.393019607549201]
   },
   {
     "tag": "Rome",
-    "title": "First Triumverate",
-    "date": "60BC",
-    "blurb": "A young Julius Ceaser allies himself with Crassus (with his money) and Pompey (with his connections) to form a powerful and ambitious first triumverate.",
+    "title": "Pompey killed in Egypt",
+    "date": "48BC",
+    "blurb": "After suffering several defeats at the hand of Julius Caesar, Pompey flees to Egypt looking for aid. An officer of Ptolemy strikes him down, by the order of the king of Egypt.",
+    "location": "Egypt",
+    "image": "",
+    "coordinates": [31.157987962433836, 32.43867217775794]
+  },
+  {
+    "tag": "Rome",
+    "title": "Caesar murdered in the forum",
+    "date": "44BC",
+    "blurb": "Caesar rules Rome as defacto dictator, taking on more and more powers to himself. He is betrayed by his friend Brutus, cornered and stabbed by a group of concerned senators.",
     "location": "Rome",
     "image": "",
-    "coordinates": [1, 1]
+    "coordinates": [41.89275569364862, 12.49186506281216]
+  },
+  {
+    "tag": "Rome",
+    "title": "Second Triumverate",
+    "date": "43BC",
+    "blurb": "Julius Caesar's young heir, Octavian, joins forces with Mark Anthony and Lepidus to combat Brutus's forces.",
+    "location": "Rome",
+    "image": "",
+    "coordinates": [41.89275569364862, 12.49186506281216]
+  },
+  {
+    "tag": "Rome",
+    "title": "Brutus defeated at Phillipi",
+    "date": "42BC",
+    "blurb": "Mark Anthony and Octavian defeat Brutus at the battle of Phillipi. Brutus commits suicide before he can be captured.",
+    "location": "Macedon",
+    "image": "",
+    "coordinates": [41.016940813939264, 24.310023261479895]
+  },
+  {
+    "tag": "Rome",
+    "title": "End of the Second Triumverate",
+    "date": "33BC",
+    "blurb": "Octavian and Mark Anthony officially break the triumverate, with Anthony allying with Egypt under the control of his lover, Cleopatra.",
+    "location": "Egypt",
+    "image": "",
+    "coordinates": [31.14662305260475, 29.90453285798097]
+  },
+  {
+    "tag": "Rome",
+    "title": "Battle of Actium",
+    "date": "31BC",
+    "blurb": "Mark Anthony and Cleopatra are defeated by Octavian at the sea battle of Actium. After fleeing both commit suicide.",
+    "location": "Actium",
+    "image": "",
+    "coordinates": [38.943921989226524, 20.75927140422824]
+  },
+  {
+    "tag": "Rome",
+    "title": "Octavian Emperor",
+    "date": "27BC",
+    "blurb": "Octavian is name Caesar August, Emperor of Rome. The Roman Republic finally falls.",
+    "location": "Rome",
+    "image": "",
+    "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {
   "tag": "Civil War",
