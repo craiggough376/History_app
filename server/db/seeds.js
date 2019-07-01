@@ -20,78 +20,6 @@ db.events.insertMany([
     "image": "",
     "coordinates": [40.215856421088205, -3.0723066655184206]
   },
-{
-    "tag": "WW2",
-    "title": "Germany Invades Poland!",
-    "date": "1 Sep 1939",
-    "blurb": "",
-    "location": "Poland",
-    "image": "",
-    "coordinates": [52.21065456233482, 20.994053508327696]
-  },
-  {
-    "tag": "WW2",
-    "title": "Invasion of France",
-    "date": "10 May – 25 June 1940",
-    "blurb": "Its too sunny outside",
-    "location": "Paris, France",
-    "image": "",
-    "coordinates": [48.85674239993837, 2.3465638555402806]
-  },
-  {
-    "tag": "WW2",
-    "title": "Dunkirk Evacuation",
-    "date": "26 May 1940",
-    "blurb": "Im going to listen to tims podcast",
-    "location": "Dunkirk, France",
-    "image": "",
-    "coordinates": [51.04550747510065, 2.262807875938338]
-  },
-  {
-    "tag": "WW2",
-    "title": "Battle of Britian",
-    "date": "10 July – 31 October 1940",
-    "blurb": "Its too sunny outside",
-    "location": "British Airspace",
-    "image": "",
-    "coordinates": [51.43209696518812, -0.8031141037909008]
-  },
-  {
-    "tag": "WW2",
-    "title": "Operation Barbarosa",
-    "date": "22 June 1941",
-    "blurb": "Its too sunny outside",
-    "location": "Moscow, Russia",
-    "image": "",
-    "coordinates": [55.65818117658415, 37.57214410086338]
-  },
-  {
-    "tag": "WW2",
-    "title": "Pearl Harbour Attack",
-    "date": "7 Dec 1941",
-    "blurb": "Its too sunny outside",
-    "location": "Hawaii, USA",
-    "image": "",
-    "coordinates": [21.376281696871626, -157.96058881789511]
-  },
-  {
-    "tag": "WW2",
-    "title": "Battle of Stalingrad",
-    "date": "23 August 1942 – 2 February 1943",
-    "blurb": "Its too sunny outside",
-    "location": "Volgograd, Russia",
-    "image": "",
-    "coordinates": [54.309856078753455, -311.61263287094084]
-  },
-  {
-    "tag": "WW2",
-    "title": "Invasion of Italy",
-    "date": "3 Sep 1943",
-    "blurb": "Its too sunny outside",
-    "location": "Salerno, Italy",
-    "image": "",
-    "coordinates": [40.657028427145306, -345.42614377425025]
-  },
   {
     "tag": "Rome",
     "title": "The Defeat of Spartacus by Crassus",
@@ -199,24 +127,6 @@ db.events.insertMany([
     "location": "Rome",
     "image": "",
     "coordinates": [41.89275569364862, 12.49186506281216]
-  },
-  {
-    "tag": "WW2",
-    "title": "D-Day",
-    "date": "6 June 1944",
-    "blurb": "Its too sunny outside",
-    "location": "Normandy, France",
-    "image": "",
-    "coordinates": [49.38647654077019, -360.51851392912397]
-  },
-  {
-    "tag": "WW2",
-    "title": "Liberation of Auchwitz",
-    "date": "January 27, 1945",
-    "blurb": "Its too sunny outside",
-    "location": "Auchwitz, Poland",
-    "image": "",
-    "coordinates": [50.10435411607842, -340.33805313366383]
   },
   {
   "tag": "Civil War",
