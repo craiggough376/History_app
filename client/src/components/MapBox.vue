@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="map">
-    <p>Map</p>
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="url"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="places[index]['coordinates']">
@@ -78,8 +77,10 @@ export default {
 <style lang="css" scoped>
 
 .map{
-  height: 70vh;
+  height: 60vh;
   width: 70vw;
+  margin: auto;
+  margin-bottom: 30px
 }
 
 .popup{
