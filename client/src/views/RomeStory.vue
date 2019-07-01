@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
 <h1>The Roman Empire</h1>
-<map-box />
-<timeline />
+<map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+<timeline :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
 </div>
 </template>
 
@@ -11,9 +11,9 @@ import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
 
 export default {
-  props: ["events"],
+  props: ["events", 'selectedEpisode'],
   computed: {
-    filtererdEvents(){
+    filteredEvents(){
     const results =  this.events.filter((event) => {
       return event.tag == "Rome"
     })

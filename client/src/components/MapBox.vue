@@ -2,10 +2,9 @@
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="url"></l-tile-layer>
-   <l-marker v-if="index != null ":lat-lng="places[index]['coordinates']">
-     <l-popup ref="popup" class="popup">
-       <h1>{{places[index]['title']}}</h1>
-       <p>{{places[index]['blurb']}}</p>
+   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']" ref="marker">
+     <l-popup  ref="popup" class="popup" >
+       <event :event ="events[this.index]" />
      </l-popup>
    </l-marker>
  </l-map>
@@ -16,28 +15,44 @@
 </template>
 
 <script>
+import {eventBus} from '../main.js'
+import Event from './Event.vue'
+
 export default {
   name: "map-box",
+  props: ["events"],
   methods: {
     showCoordinates(ev){
     console.log(ev['latlng']['lat'], ev['latlng']['lng']);
   },
     handleNextClick(){
-      if ((this.index > -1) && (this.index < 2)){
+      if ((this.index > -1) && (this.index + 1 < this.events.length )){
           this.index ++
-          this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
+          eventBus.$emit('new event selected', this.index)
       }
     },
     handlePreviousClick(){
-      if ((this.index > 0) && (this.index < 3)){
+      if ((this.index > 0) && (this.index < this.events.length)){
           this.index --
-          this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
+          this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
+          eventBus.$emit('new event selected', this.index)
       }
     },
     beginJourney(){
       this.index = 0
-      this.$refs.map.mapObject.flyTo(this.places[this.index]['coordinates'], 10)
-      // this.$refs.map.mapObject.openPopup()
+      this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
+      eventBus.$emit('new event selected', this.index)
+      // let beginRef = this.events[this.index];
+      // this.$refs.marker[0].mapObject.openPopup()
+      // console.log(this.$refs.marker)
+
+      // let selectedBeerRef = this.selectedBeer.fields.id;
+      // this.$refs[selectedBeerRef][0].mapObject.openPopup()
+    },
+    jumpToEvent(indexSelected){
+      this.index = indexSelected
+      this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
     }
   },
   data(){
@@ -69,7 +84,12 @@ export default {
     }
   },
   mounted(){
-
+    eventBus.$on('event clicked', (payload) => {
+      this.jumpToEvent(payload)
+    })
+  },
+  components: {
+    'event': Event
   }
 }
 </script>
@@ -79,15 +99,16 @@ export default {
 .map{
 
   height: 60vh;
-  width: 70vw;
+  width: 90vw;
   margin: auto;
   margin-bottom: 30px
 }
 
 .popup{
-  width: 300px;
-height: 150px;
-overflow: scroll;
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  font-size: 7;
 }
 
 </style>

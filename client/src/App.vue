@@ -8,7 +8,7 @@
     </nav>
 
     <div class="">
-    <router-view id="view" :events="events"></router-view>
+    <router-view id="view" :events="events" :selectedEpisode="selectedEpisode"></router-view>
 
   </div>
     </div>
@@ -16,20 +16,24 @@
 </template>
 
 <script>
+import {eventBus} from './main.js'
 
 export default {
   name: 'app',
   data() {
     return {
-  events: []
+  events: [],
+  selectedEpisode: 0
     }
   },
-
-
 mounted(){
-  fetch('http://localhost:3000/api/events#/')
+  fetch('http://localhost:3000/api/events/')
   .then(res => res.json())
   .then(events => this.events = events)
+
+  eventBus.$on('new event selected', (payload) => {
+    this.selectedEpisode = payload
+  })
 }
 }
 
@@ -43,7 +47,7 @@ mounted(){
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 </style>
