@@ -119,7 +119,7 @@ export default {
   border: 2px solid black;
 } */
 .start-date {
-  grid-column: 1 / 3;
+  grid-column: 1 / 5;
   grid-row: 4 / 5;
 }
 .end-date {

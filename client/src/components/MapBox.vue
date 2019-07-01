@@ -9,8 +9,9 @@
    </l-marker>
  </l-map>
  <button v-on:click="beginJourney">Begin</button>
- <button v-on:click="handleNextClick">Next</button>
  <button v-on:click="handlePreviousClick">Previous</button>
+ <button v-on:click="handleNextClick">Next</button>
+
   </div>
 </template>
 
@@ -95,7 +96,9 @@ export default {
   height: 60vh;
   width: 70vw;
   margin: auto;
-  margin-bottom: 30px
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border: 1px solid black;
 }
 
 .popup{

@@ -1,7 +1,9 @@
 <template lang="html">
-  <div>
-<h1>The Roman Empire</h1>
+  <div class="all">
+<h1>THE FALL OF THE ROMAN REPUBLIC</h1>
+<div class="map-container">
 <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents"/>
+</div>
 <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
@@ -28,7 +30,9 @@ export default {
     return {
       boxWidth: 8,
       inheritedStyle: {
-        box: {},
+        box: {
+          "font-family": "Palatino, serif"
+        },
         branch: {},
         grid: {},
         timeline: {},
@@ -38,8 +42,8 @@ export default {
         selected: {}
       },
       dateBreadth: {
-        start: '1981',
-        end: '1988'
+        start: '82 BC',
+        end: '27 BC'
       }
     }
   }
@@ -49,4 +53,13 @@ export default {
  </script>
 
  <style lang="css" scoped>
+   .all {
+     font-family: Palatino, serif;
+     color: #800000;
+   }
+
+   .map-container {
+     margin: auto;
+     padding: 0px;
+   }
  </style>
