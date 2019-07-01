@@ -1,12 +1,8 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
+
     <router-view></router-view>
-=======
 
-
-
->>>>>>> develop
   </div>
 </template>
 
@@ -29,5 +25,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  align-items: center;
 }
 </style>
