@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
 <h3>{{event.title}}</h3>
+<img :src="event.image"/>
 <p>{{event.blurb}}</p>
 </div>
 </template>

@@ -44,8 +44,8 @@ export default {
       this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
       eventBus.$emit('new event selected', this.index)
       // let beginRef = this.events[this.index];
-      // this.$refs.marker[0].mapObject.openPopup()
-      // console.log(this.$refs.marker)
+      this.$refs.marker.mapObject.openPopup()
+      console.log(this.$refs.marker)
 
       // let selectedBeerRef = this.selectedBeer.fields.id;
       // this.$refs[selectedBeerRef][0].mapObject.openPopup()
@@ -60,7 +60,7 @@ export default {
       zoom:4,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: [47.413220, -1.219482],
-      index: null,
+      index: 0,
       map: null,
       places: [
         {
