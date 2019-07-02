@@ -1,18 +1,32 @@
 <template lang="html">
   <div class="all">
-<form v-if="formOn" class="" v-on:submit.prevent="handleSubmit" type="post">
-  <label for="title">Event:</label>
-  <input id="title" type="text" name="" v-model="title" required>
-  <label for="date">Date:</label>
-  <input id="date" type="text" name="" v-model="date" required>
-  <input id="coordinates" type="text" v-model="coordinates" required>
-  <input type="submit" name="" value="Add Event">
-</form>
-<button v-if="formOn" v-on:click="handleFinish" type="button" name="button">Finished</button>
-<event v-if="!(formOn)" :event="episodes[selectedEpisode]"/>
-<timeline selectedEpisode="selectedEpisode" :events="episodes" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
-<map-box :selectedEpisode="selectedEpisode" :events="episodes" :mapUrl="mapUrl" :center="center"/>
-</div>
+    <h2>Create Your Own Timeline!</h2>
+    <div class ="event-and-map">
+      <map-box :selectedEpisode="selectedEpisode" :events="episodes" :mapUrl="mapUrl" :center="center"/>
+
+      <div class="event-container">
+        <p v-if="formOn" class="instructions">Create your events, add them to the timeline, then click finish when you are done!</p>
+        <form v-if="formOn" class="" v-on:submit.prevent="handleSubmit" type="post">
+          <label for="title">Event:</label>
+          <input id="title" type="text" name="" v-model="title" required>
+          <label for="date">Date:</label>
+          <input id="date" type="text" name="" v-model="date" required>
+          <label for="summary">Summary:</label>
+          <textarea id="summary"  v-model="blurb" />
+          <p>Location:</p>
+          <p v-if="coordinates">{{coordinates}}</p>
+          <p v-if="!coordinates"><em>Click the map to add a location</em></p>
+          <input type="submit" class="submit" value="Add Event">
+        </form>
+        <br />
+        <button v-if="formOn" v-on:click="handleFinish" type="button" name="button">Finish!</button>
+
+        <event v-if="!(formOn)" :event="episodes[selectedEpisode]"/>
+      </div>
+    </div>
+
+    <timeline selectedEpisode="selectedEpisode" :events="episodes" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
+  </div>
 </template>
 
 <script>
@@ -27,6 +41,7 @@ export default {
       formOn: true,
       title: "",
       date: "",
+      blurb: "",
       coordinates: "",
       episodes: [],
       boxWidth: 8,
@@ -57,11 +72,12 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log('form submitted')
+      if(this.coordinates){
       this.episodes.push(
         {
           title: this.title,
           date: this.date,
+          blurb: this.blurb,
           coordinates: this.coordinates
         }
       )
@@ -69,6 +85,10 @@ export default {
       if(this.episodes.length == 1){
         this.dateBreadth.start = this.date
       }
+      this.title = this.date = this.coordinates = this.blurb = ""
+    } else {
+      alert("Please click a location on the map before submitting the form!")
+    }
     },
     handleFinish() {
       console.log('finished')
@@ -85,4 +105,60 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.all {
+  margin: 0px;
+}
+p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+h2 {
+  size: 1.5rem;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.event-and-map{
+  display: flex;
+  padding: 1px 10px;
+}
+
+.event-container{
+  width: 30%;
+  margin: auto;
+  margin-top: 0px;
+  padding: 6px;
+}
+
+.instructions{
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed black;
+}
+textarea{
+  height: 10vh;
+  resize: none;
+}
+
+.submit{
+  margin: auto;
+  margin-top: 5px;
+}
+
+em {
+  font-weight: bold;
+}
+
+button {
+  /* font-size: 1rem; */
+}
 </style>
