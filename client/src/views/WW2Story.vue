@@ -84,18 +84,19 @@ export default {
     font-family: American Typewriter, serif;
 }
 h1{
+  size: 1.5rem;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
   margin-top: 0px;
-  padding: 10px;
-  padding-bottom: 0px;
-  font-size: 2.5em;
-
 }
 
 .titles{
+  padding: 0px;
   display: flex;
   justify-content:center;
   align-items: center;
-
+  border-style: solid;
 }
 
 .top-half{
