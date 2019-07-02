@@ -240,70 +240,70 @@ db.events.insertMany([
     "tag": "WW2",
     "title": "Germany Invades Poland!",
     "date": "1 Sep 1939",
-    "blurb": "",
+    "blurb": "German forces attack Poland across all frontiers and its planes bomb Polish cities, including the capital, Warsaw - Britain and France prepare to declare war. France and England declared war against Germany on Sept. 3, but neither country was prepared to fight and would not deploy a significant number of military forces until the next year, leaving Poland alone in its defense. Although it had an army of more than 700,000, Poland was unprepared for Germany’s blitzkrieg tactics. Its army could not deploy its troops quickly enough to defend against the more powerful German forces. As a result, many civilians lost their lives.",
     "location": "Poland",
-    "image": "",
+    "image": "https://www.archives.gov/files/research/military/ww2/photos/images/thumbnails/ww2-76-l.jpg",
     "coordinates": [52.22269824588539, 19.31786494927118]
   },
   {
     "tag": "WW2",
     "title": "Invasion of France",
     "date": "10 May – 25 June 1940",
-    "blurb": "Its too sunny outside",
+    "blurb": "In 1940 Hitler had his sights set on its southwestern neighbour. German forces defeated Allied forces by mobile operations and conquered France, Belgium, Luxembourg and the Netherlands, German tanks outflanked the Maginot Line and pushed deep into France, occupying Paris unopposed on 14 June. After the flight of the French government and the collapse of the French army, German commanders met with French officials on 18 June to negotiate an end to hostilities.",
     "location": "Paris, France",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Adolf_Hitler_in_Paris_1940.jpg/800px-Adolf_Hitler_in_Paris_1940.jpg",
     "coordinates": [48.85674239993837, 2.3465638555402806]
   },
   {
     "tag": "WW2",
     "title": "Dunkirk Evacuation",
     "date": "26 May 1940",
-    "blurb": "Im going to listen to tims podcast",
+    "blurb": "in the course of what was known as Operation Dynamo, more than 300,000 British and French soldiers were evacuated by an armada made up of Royal Navy destroyers and warships, pleasure steamers and hundreds of those famous little ships manned by civilian sailors. The evacuation was needed because when Hitler’s army had invaded Belgium and France on 10 May, the German panzer divisions had cut through the French troops who had lined up alongside the British Expeditionary Force in Belgium, leaving the British army one thrust away from being surrounded.",
     "location": "Dunkirk, France",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d2/DUNKIRK1940.jpg",
     "coordinates": [51.04550747510065, 2.262807875938338]
   },
   {
     "tag": "WW2",
     "title": "Battle of Britian",
     "date": "10 July – 31 October 1940",
-    "blurb": "Its too sunny outside",
+    "blurb": "In the summer and fall of 1940, German and British air forces clashed in the skies over the United Kingdom, locked in the largest sustained bombing campaign to that date. A significant turning point of World War II, the Battle of Britain ended when Germany’s Luftwaffe failed to gain air superiority over the Royal Air Force despite months of targeting Britain’s air bases, military posts and, ultimately, its civilian population. Britain’s decisive victory saved the country from a ground invasion and possible occupation by German forces while proving that air power alone could be used to win a major battle.",
     "location": "British Airspace",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Boulton_Paul_Defiant.jpg",
     "coordinates": [51.43209696518812, -0.8031141037909008]
   },
   {
     "tag": "WW2",
     "title": "Operation Barbarosa",
     "date": "22 June 1941",
-    "blurb": "Its too sunny outside",
+    "blurb": "Hitler launched Operation 'Barbarossa', the invasion of the Soviet Union. It was the beginning of a campaign that would ultimately decide the Second World War. Hitler regarded the Soviet Union as his natural enemy. German forces attacked towards Leningrad in the north, Moscow in the centre and the Ukraine in the south. But the immense distances and difficult terrain soon caused logistical problems. Russian troop numbers had been underestimated and, despite terrible losses, the Soviet will to fight remained strong. German casualties mounted.",
     "location": "Moscow, Russia",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Finnish_troops_advancing_near_Rautj%C3%A4rvi.jpg",
     "coordinates": [55.65818117658415, 37.57214410086338]
   },
   {
     "tag": "WW2",
     "title": "Pearl Harbour Attack",
     "date": "7 Dec 1941",
-    "blurb": "Its too sunny outside",
+    "blurb": "On the morning of 7 December 1941, at 7.55am local time, 183 aircraft of the Imperial Japanese Navy attacked the United States Naval base at Pearl Harbor on the island of Oahu, Hawaii. Their intention was to destroy and damage as much of the US Pacific Fleet as possible, before it could respond to Japanese operations taking place on the same day against British, Dutch and US territories in southeast Asia. The day after the attack, President Franklin D. Roosevelt delivered a speech to the United States Congress urging for a formal declaration of war against Japan. War was declared an hour later, bringing the United States into the Second World War and unifying the country behind the war effort.",
     "location": "Hawaii, USA",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/The_USS_Arizona_%28BB-39%29_burning_after_the_Japanese_attack_on_Pearl_Harbor_-_NARA_195617_-_Edit.jpg/1920px-The_USS_Arizona_%28BB-39%29_burning_after_the_Japanese_attack_on_Pearl_Harbor_-_NARA_195617_-_Edit.jpg",
     "coordinates": [21.376281696871626, -157.96058881789511]
   },
   {
     "tag": "WW2",
     "title": "Battle of Stalingrad",
     "date": "23 August 1942 – 2 February 1943",
-    "blurb": "Its too sunny outside",
+    "blurb": "The Soviet Union inflicted a catastrophic defeat on the German Army in and around this strategically important city on the Volga river. Stalingrad was heavily bombed by the Luftwaffe, and the ruins became the scene for months of bitter street fighting. By October most of the city was in German hands, but the Russians clung onto the banks of the Volga, across which they ferried vital reserves.  Forbidden to break out by Hitler, the Sixth Army endured until February 1943, when its exhausted remnants surrendered. The Germans lost a total of 500,000 men during the Stalingrad campaign, including 91,000 taken prisoner.",
     "location": "Volgograd, Russia",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Bundesarchiv_Bild_183-B22478%2C_Stalingrad%2C_Luftwaffen-Soldaten_in_Ruinen.jpg",
     "coordinates": [54.309856078753455, -311.61263287094084]
   },
   {
     "tag": "WW2",
     "title": "Invasion of Italy",
     "date": "3 Sep 1943",
-    "blurb": "Its too sunny outside",
+    "blurb": "The Italians withdrew from the war the day before the invasion, but the Allies landed in an area defended by German troops. Planned under the name Top Hat, it was supported by the deception plan Operation Boardman. British and American forces pushed inland. The fighting around Salerno proved particularly fierce and ended when British forces from Calabria arrived. Defeated around the beaches, the Germans withdrew north to the Volturno Line. The invasion opened a second front in Europe and helped take pressure off Soviet forces in the east.",
     "location": "Salerno, Italy",
     "image": "",
     "coordinates": [40.657028427145306, -345.42614377425025]
@@ -312,36 +312,36 @@ db.events.insertMany([
     "tag": "WW2",
     "title": "D-Day",
     "date": "6 June 1944",
-    "blurb": "Its too sunny outside",
+    "blurb": "the Battle of Normandy resulted in the Allied liberation of Western Europe from Nazi Germany’s control. Codenamed Operation Overlord, the battle began on June 6, 1944, also known as D-Day, when some 156,000 American, British and Canadian forces landed on five beaches along a 50-mile stretch of the heavily fortified coast of France’s Normandy region. The invasion was one of the largest amphibious military assaults in history and required extensive planning. Prior to D-Day, the Allies conducted a large-scale deception campaign designed to mislead the Germans about the intended invasion target. By late August 1944, all of northern France had been liberated, and by the following spring the Allies had defeated the Germans. The Normandy landings have been called the beginning of the end of war in Europe.",
     "location": "Normandy, France",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/The_British_Army_in_Italy_1943_NA7433.jpg",
     "coordinates": [49.38647654077019, -360.51851392912397]
   },
   {
     "tag": "WW2",
     "title": "Liberation of Auchwitz",
     "date": "January 27, 1945",
-    "blurb": "Its too sunny outside",
+    "blurb": "The Auschwitz main camp, the Birkenau death camp and the Monowitz labor camp were liberated by soldiers of the Soviet Union in the First Army of the Ukrainian Front, under the command of Marshal Koniev. The site had been evacuated by the Nazis just days earlier. Thus ended the largest mass murder in a single location in human history. Precise numbers are still debated, but according to the US Holocaust Memorial Museum, the German SS systematically killed at least 960,000 of the 1.1-1.3 million Jews deported to the camp.",
     "location": "Auchwitz, Poland",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Child_survivors_of_Auschwitz.jpeg/1920px-Child_survivors_of_Auschwitz.jpeg",
     "coordinates": [50.10435411607842, -340.33805313366383]
   },
   {
     "tag": "WW2",
     "title": "Germany Surrender",
     "date": "2 May 1945",
-    "blurb": "Its too sunny outside",
+    "blurb": " Adolf Hitler, dictator of Germany, burrowed away in a refurbished air-raid shelter, consumes a cyanide capsule, then shoots himself with a pistol. Alfred Jodl, representing the German High Command, signed a document unconditionally surrendering all German military forces, to take effect the following day, thereby all but ending World War II in Europe. Although at the time of the surrender virtually all of Germany was under Allied control, German forces still occupied western Netherlands, Denmark, much of Norway, as well as western and central Czechoslovakia. German and Russian troops fought on in the East for most of the next day.",
     "location": "Berlin",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Bundesarchiv_B_145_Bild-P054320%2C_Berlin%2C_Brandenburger_Tor_und_Pariser_Platz.jpg",
     "coordinates": [52.49976227304273, -346.6326719279791]
   },
   {
     "tag": "WW2",
     "title": "Hiroshima Atomic Bombing",
     "date": "August 6 and 9, 1945",
-    "blurb": "Its too sunny outside",
+    "blurb": "an American B-29 bomber dropped the world’s first deployed atomic bomb over the Japanese city of Hiroshima. The explosion wiped out 90 percent of the city and immediately killed 80,000 people; tens of thousands more would later die of radiation exposure. Three days later, a second B-29 dropped another A-bomb on Nagasaki, killing an estimated 40,000 people. Japan’s Emperor Hirohito announced his country’s unconditional surrender in World War II in a radio address on August 15, citing the devastating power of “a new and most cruel bomb. World War II had ended.",
     "location": "Hiroshima, Japan",
-    "image": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/1920px-Atomic_bombing_of_Japan.jpg",
     "coordinates": [34.389017035105006, -587.5568499725138]
   }
 ])
