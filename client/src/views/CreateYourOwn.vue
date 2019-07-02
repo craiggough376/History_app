@@ -129,8 +129,9 @@ h2 {
 .event-container{
   width: 30%;
   margin: auto;
-  margin-top: 0px;
-  padding: 6px;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 0.5em;
 }
 
 .instructions{
