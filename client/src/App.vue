@@ -46,8 +46,21 @@ mounted(){
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  /* display: flex;
-  align-items: center; */
+  margin: 0px;
+  margin-top: 0px;
+}
+nav {
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: grey;
+  color: white;
+}
+a {
+  color: white;
+}
+body {
+  margin: 0px;
+  /* padding-bottom: 10px; */
 }
 </style>

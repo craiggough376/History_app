@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
-<h3>{{event.title}}</h3>
-<img :src="event.image"/>
+<h2>{{event.title}}</h2>
 <p>{{event.blurb}}</p>
+<img :src="event.image"/>
 </div>
 </template>
 
@@ -21,7 +21,8 @@ methods: {
 </script>
 
 <style lang="css" scoped>
-  li {
-    list-style-type: none;
-  }
+img {
+  max-height: 200px;
+  max-width: 350px;
+}
 </style>
