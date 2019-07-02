@@ -20,11 +20,8 @@
 <script>
 import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
-<<<<<<< HEAD
 import {eventBus} from '../main.js'
-=======
 import Event from '@/components/Event.vue'
->>>>>>> 0a5273fa64813584939356b1fb4b3dacb1a4f3a0
 
 export default {
   props: ["events", 'selectedEpisode'],
