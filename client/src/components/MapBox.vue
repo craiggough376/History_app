@@ -4,7 +4,7 @@
    <l-tile-layer :url="mapUrl"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
      <l-popup ref="popup" class="popup">
-       <event :event ="events[this.index]" />
+       <h2>{{events[this.index].location}}</h2>
      </l-popup>
    </l-marker>
  </l-map>
@@ -102,8 +102,8 @@ export default {
 }
 
 .popup{
-  width: 300px;
-height: 150px;
+  width: 150px;
+height: 50px;
 overflow: scroll;
 }
 
