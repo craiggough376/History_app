@@ -9,6 +9,7 @@
 <script>
 import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
+import {eventBus} from '../main.js'
 
 export default {
   props: ["events", 'selectedEpisode'],
@@ -45,6 +46,9 @@ export default {
       center: [50.51342652633956, 13.0078125]
       // mapUrl: 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png'
     }
+  },
+  mounted() {
+    eventBus.$emit('new event selected', -1)
   }
 }
 </script>

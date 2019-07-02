@@ -56,7 +56,7 @@ export default {
   data(){
     return{
       zoom:4,
-      center: L.latLng(50.51342652633956, 13.0078125),
+      // center: L.latLng(50.51342652633956, 13.0078125),
       url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(47.413220, -1.219482),
