@@ -1,14 +1,25 @@
 <template lang="html">
-  <div>
+  <div class="all">
   <h1>The Civil War</h1>
+  <div class="event-and-map">
+  <div class="map-container">
+    <div class="event-container">
   <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
-  <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
+</div>
+
+  <event class="event" :event="filteredEvents[selectedEpisode]"/>
+</div>
+</div>
+<timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
 </template>
 
 <script>
 import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
+import Event from '@/components/Event.vue'
+
+
 
 export default {
   props: ["events", 'selectedEpisode'],
@@ -22,20 +33,36 @@ export default {
   },
   components: {
     "timeline": Timeline,
-    "map-box": MapBox
+    "map-box": MapBox,
+    "event": Event
   },
   data() {
     return {
       boxWidth: 8,
       inheritedStyle: {
-        box: {},
-        branch: {},
-        grid: {},
-        timeline: {},
-        boundaries: {},
+        box: {
+        'font-family': '#E6AF2E',
+        'border-color': '#E6AF2E',
+        'border-width': '3px'
+        },
+        branch: {
+          'border-color': '#E6AF2E'
+
+        },
+        grid: {
+        },
+        timeline: {
+          'border-color': '#E6AF2E'
+        },
+        boundaries: {
+          'border-color': '#E6AF2E'
+        },
         date: {},
         title: {},
-        selected: {}
+        selected: {
+          'border-color': '#E6AF2E',
+
+        }
       },
       dateBreadth: {
         start: '1981',
@@ -49,4 +76,49 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.all {
+  margin: 0px;
+  background-image:url(https://chainimage.com/images/old-paper-background-photo-background-1-jpg.jpg);
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+
+}
+
+p .event {
+  font-size: 50rem;
+}
+
+  h1 {
+    size: 1.5rem;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    border-top: 3px solid #E6AF2E;
+    border-bottom: 2px solid #E6AF2E;
+  }
+
+  .event-and-map{
+    display: flex;
+    padding: 10px 10px;
+
+  }
+
+  .event-container{
+    width: 65%;
+    margin: auto;
+    border: 10px solid #E6AF2E;
+    padding: 8px;
+  }
+
+
+
+
+</style>
+
+}
+
+
 </style>
