@@ -109,7 +109,7 @@ export default {
   /* grid-template-columns: repeat(50, 1fr); */
   grid-template-rows: repeat(6, 1fr);
   margin: auto;
-  height: 200px;
+  height: 30vh;
   width: 95%;
   border: 1px solid black;
   padding: 10px;
@@ -134,6 +134,7 @@ export default {
 p {
   margin: 0px;
   font-size: 0.8rem;
+
 }
 
 .date {

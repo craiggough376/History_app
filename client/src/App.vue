@@ -2,9 +2,10 @@
   <div id="app">
     <nav>
       <router-link :to="{ name: 'home' }">Home</router-link>
-      | <router-link :to="{ name: 'rome-story' }">Roman Empire</router-link>
+      | <router-link :to="{ name: 'rome-story' }">Roman Republic</router-link>
       | <router-link :to="{ name: 'ww2-story' }">WW2</router-link>
-      | <router-link :to="{ name: 'usa-story' }">Civil War</router-link>
+      | <router-link :to="{ name: 'usa-story' }">US Civil War</router-link>
+      | <router-link :to="{ name: 'create-your-own' }">Create Your Own</router-link>
     </nav>
 
     <div class="">
@@ -48,6 +49,8 @@ mounted(){
   color: #2c3e50;
   margin: 0px;
   margin-top: 0px;
+  background-color: AntiqueWhite;
+  height: 100vh;
 }
 nav {
   margin-bottom: 0px;
