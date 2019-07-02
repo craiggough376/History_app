@@ -4,6 +4,7 @@ import Home from '@/views/Home';
 import RomeStory from '@/views/RomeStory';
 import WW2Story from '@/views/WW2Story';
 import USAStory from '@/views/USAStory';
+import CreateYourOwn from '@/views/CreateYourOwn';
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ const router = new Router({
       path: '/usastory',
       name: 'usa-story',
       component: USAStory
+    },
+    {
+      path: '/createyourown',
+      name: 'create-your-own',
+      component: CreateYourOwn
     }
   ]
 });

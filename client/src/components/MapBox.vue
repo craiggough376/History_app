@@ -4,7 +4,7 @@
    <l-tile-layer :url="mapUrl"></l-tile-layer>
    <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
      <l-popup ref="popup" class="popup">
-       <event :event ="events[this.index]" />
+       <h2>{{events[this.index].location}}</h2>
      </l-popup>
    </l-marker>
  </l-map>
@@ -25,7 +25,8 @@ export default {
   props: ["events", "mapUrl", "center"],
   methods: {
     showCoordinates(ev){
-    console.log(ev['latlng']['lat'], ev['latlng']['lng']);
+     let coordinates = [ev['latlng']['lat'], ev['latlng']['lng']];
+    eventBus.$emit('map clicked', coordinates)
   },
     handleNextClick(){
       if ((this.index > -1) && (this.index + 1 < this.events.length )){
@@ -108,8 +109,8 @@ export default {
 }
 
 .popup{
-  width: 300px;
-height: 150px;
+  width: 150px;
+height: 50px;
 overflow: scroll;
 }
 

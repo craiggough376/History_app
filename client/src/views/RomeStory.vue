@@ -80,7 +80,7 @@ export default {
 <style lang="css" scoped>
   .all {
     margin: 0px;
-    font-family: Palatino, serif;
+    font-family: 'Palatino', serif;
     color: #E6AF2E;
     background-color: #4A001F;
     padding-bottom: 80px;
