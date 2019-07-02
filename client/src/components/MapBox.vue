@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="map">
-    <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
+    <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :minZoom="2" :attribution="attribution" ref="map">
    <l-tile-layer :url="mapUrl"></l-tile-layer>
-   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']">
+   <l-marker v-if="index != null ":lat-lng="events[index]['coordinates']" ref="marker">
      <l-popup ref="popup" class="popup">
        <h2>{{events[this.index].location}}</h2>
      </l-popup>
@@ -48,7 +48,7 @@ export default {
       eventBus.$emit('new event selected', this.index)
       // let beginRef = this.events[this.index];
       this.$refs.marker.mapObject.openPopup()
-      console.log(this.$refs.marker)
+      // console.log(this.$refs.marker)
 
       // let selectedBeerRef = this.selectedBeer.fields.id;
       // this.$refs[selectedBeerRef][0].mapObject.openPopup()
@@ -66,7 +66,7 @@ export default {
       url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(47.413220, -1.219482),
-      index: null,
+      index: 0,
       map: null,
       places: [
         {
@@ -109,9 +109,7 @@ export default {
 }
 
 .popup{
-  width: 150px;
-height: 50px;
-overflow: scroll;
+
 }
 
 .buttons{

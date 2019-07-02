@@ -1,11 +1,14 @@
 <template lang="html">
   <div class="body">
-  <h1>World War 2</h1>
+    <h1>World War II</h1>
     <div class="top-half">
         <div class="text-box">
         <event :event="filteredEvents[selectedEpisode]"/>
         </div>
-      <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
+        <div class="map">
+          <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
+        </div>
+
     </div>
   <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
@@ -36,7 +39,7 @@ export default {
       boxWidth: 8,
       inheritedStyle: {
         box: {
-          'background-color': '',
+          'background-color': 'white'
         },
         branch: {
 
@@ -53,7 +56,8 @@ export default {
         date: {},
         title: {},
         selected: {
-
+          'background-color': 'grey',
+          'color': 'white'
         }
       },
       dateBreadth: {
@@ -71,25 +75,32 @@ export default {
 <style lang="css" scoped>
 
 .body{
-    background-color: ;
+    background-color: #A3B18A;
+    /* background-image: url('../assets/images/camo.jpg'); */
     margin: 0px;
-    color: #969696;
+    font-family: American Typewriter, serif;
 }
 h1{
-  margin-top: 0px;
+  margin: 0px;
 }
 
 .top-half{
+  margin-top: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
+}
+
+.map{
+
 }
 
 .text-box{
   width: 30vw;
-  height: 40vh;
-  overflow: scroll;
+  font-size: 0.8em;
   border-width: medium;
   border-style: solid;
   margin: 10px;
+  background-image: url('../assets/images/newspapers.jpg');
+  background-size: contain;
 }
 </style>
