@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="body">
-    <h1>World War II</h1>
+    <div class="titles">
+      <h1>World War II</h1>
+      <h2>1939-1945</h2>
+    </div>
     <div class="top-half">
         <div class="text-box">
         <event :event="filteredEvents[selectedEpisode]"/>
@@ -42,13 +45,13 @@ export default {
           'background-color': 'white'
         },
         branch: {
-
+          'border-color': '#A8060C'
         },
         grid: {
-          'background-color': '',
+          'background-color': '#588157'
         },
         timeline: {
-
+          'border-color': '#A8060C'
         },
         boundaries: {
 
@@ -81,7 +84,18 @@ export default {
     font-family: American Typewriter, serif;
 }
 h1{
-  margin: 0px;
+  margin-top: 0px;
+  padding: 10px;
+  padding-bottom: 0px;
+  font-size: 2.5em;
+
+}
+
+.titles{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+
 }
 
 .top-half{
