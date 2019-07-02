@@ -25,7 +25,8 @@ export default {
   props: ["events", "mapUrl", "center"],
   methods: {
     showCoordinates(ev){
-    console.log(ev['latlng']['lat'], ev['latlng']['lng']);
+     let coordinates = [ev['latlng']['lat'], ev['latlng']['lng']];
+    eventBus.$emit('map clicked', coordinates)
   },
     handleNextClick(){
       if ((this.index > -1) && (this.index + 1 < this.events.length )){

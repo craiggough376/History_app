@@ -23,7 +23,7 @@ export default {
   data() {
     return {
   events: [],
-  selectedEpisode: 0
+  selectedEpisode: -1
     }
   },
 mounted(){
