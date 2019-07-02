@@ -1,14 +1,16 @@
 <template lang="html">
   <div>
-<h2>{{event.title}}</h2>
-<p>{{event.blurb}}</p>
-<img :src="event.image"/>
+<h2 v-if="event">{{event.title}}</h2>
+<p v-if="event">{{event.blurb}}</p>
+<img v-if="event" :src="event.image"/>
+<h2 v-if="!event">Click begin to start the timeline.</h2>
+<p v-if="!event">Or click an item on the timeline to see that event.</p>
 </div>
 </template>
 
 <script>
 export default {
-name: "event-select",
+name: "event",
 data(){
   return {
     selectedEvent: null

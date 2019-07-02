@@ -18,7 +18,7 @@
 import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
 import Event from '@/components/Event.vue'
-
+import {eventBus} from '../main.js'
 
 
 export default {
@@ -71,6 +71,10 @@ export default {
       mapUrl: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
       center: [39.804755362523224, -99.16197449275398]
     }
+  },
+  mounted() {
+    eventBus.$emit('new event selected', -1)
+    this.episodeSelected = 0
   }
 }
 </script>

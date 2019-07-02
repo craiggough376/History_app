@@ -2,19 +2,19 @@
   <div class="body">
     <h1> Maps of History</h1>
     <div class="images">
-        <div class="image1">
+        <div class="image1 image">
           <a href="http://localhost:8080/#/romestory">
           <img src="@/assets/images/roman.jpg" height="200px" width="300px">
           </a>
-          <h2>Roman Empire</h2>
+          <h2>Roman Republic</h2>
         </div>
-        <div class="image2">
+        <div class="image2 image">
           <a href="http://localhost:8080/#/ww2story">
           <img src="@/assets/images/ww22.jpg" height="200px" width="300px">
           </a>
           <h2>World War 2</h2>
         </div>
-        <div class="image3">
+        <div class="image3 image">
           <a href="http://localhost:8080/#/usastory">
           <img src="@/assets/images/civilwar.jpg" height="200px" width="300px">
           </a>
@@ -46,13 +46,14 @@ export default {
 
 
 .body{
-  /* background-color: darkgrey; */
   /* background-image: url('../assets/images/map.jpg'); */
   font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  display: flex;
+  flex-direction: column;
 }
 
 h1{
-  margin-top: 10px;
+  margin-top: 5vh;
   margin-bottom: 10px;
   font-size: 3.5em;
 }
@@ -60,11 +61,16 @@ p{
   font-size: 1.5em;
 }
 
+.image {
+  border: 1px solid black;
+  border-radius: 0.5em;
+  width: 32vw;
+}
+
 .image1{
   font-family: 'Palatino', serif;
   color: #E6AF2E;
   background-color: #4A001F;
-  width: 33vw;
   text-decoration: none;
 }
 .image2{
@@ -72,19 +78,22 @@ p{
   background-color: #A3B18A;
   font-family: American Typewriter, serif;
   color: black;
-  width: 33vw;
 }
 .image3{
   background-image:url(https://chainimage.com/images/old-paper-background-photo-background-1-jpg.jpg);
-  width: 33vw;
 }
 
 .images{
+  margin-top: 5vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.create-button {
+  margin-top: 5vh;
 }
 
 button{

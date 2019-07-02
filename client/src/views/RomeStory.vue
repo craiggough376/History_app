@@ -17,6 +17,7 @@
 import Timeline from '@/components/Timeline.vue'
 import MapBox from '@/components/MapBox.vue'
 import Event from '@/components/Event.vue'
+import {eventBus} from '../main.js'
 
 export default {
   props: ["events", 'selectedEpisode'],
@@ -71,6 +72,9 @@ export default {
       mapUrl: 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
       center: [41.01649883461313, 14.229094522985932]
     }
+  },
+  mounted() {
+    eventBus.$emit('new event selected', -1)
   }
 }
 
