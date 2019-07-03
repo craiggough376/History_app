@@ -76,6 +76,7 @@ export default {
     eventBus.$on('map clicked', (payload) => {
       this.coordinates = payload;
     })
+    eventBus.$emit('create page', null)
   },
   methods: {
     handleSubmit() {
