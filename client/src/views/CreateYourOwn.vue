@@ -3,7 +3,6 @@
     <h2>Create Your Own Timeline!</h2>
     <div class ="event-and-map">
       <map-box :selectedEpisode="selectedEpisode" :events="episodes" :mapUrl="mapUrl" :center="center"/>
-
       <div class="event-container">
         <p v-if="formOn" class="instructions">Create your events, add them to the timeline, then click finish when you are done!</p>
         <form v-if="formOn" class="" v-on:submit.prevent="handleSubmit" type="post">
