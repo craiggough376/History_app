@@ -131,7 +131,7 @@ db.events.insertMany([
   {
   "tag": "Civil War",
     "title": "The Peculiar Institution",
-    "date": "1865",
+    "date": "1619",
     "blurb": "Slavery arrived in North America along side the Spanish and English colonists of the 17th and 18th centuries, with an estimated 645,000 Africans imported during the more than 250 years the institution was legal.",
     "location": "Alabama",
     "image": "http://icnacsj.org/wp-content/uploads/2016/03/Slavery.jpg",
@@ -158,7 +158,7 @@ db.events.insertMany([
 {
   "tag": "Civil War",
   "title": "The Wilmot Proviso",
-  "date": "1984",
+  "date": "1846",
   "blurb": "The Wilmot Proviso was a piece of legislation proposed by David Wilmot (D-FS-R PA) at the close of the Mexican-American War.  If passed, the Proviso would have outlawed slavery in territory acquired by the United States as a result of the war, which included most of the Southwest and extended all the way to California.",
   "location": "Washington",
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/David_Wilmot.png/220px-David_Wilmot.png",
@@ -212,7 +212,7 @@ db.events.insertMany([
 {
   "tag": "Civil War",
   "title": "John Brown’s Raid",
-  "date": "1858",
+  "date": "1859",
   "blurb": "Abolitionist John Brown supported violent action against the South to end slavery and played a major role in starting the Civil War. After the Pottawatomie Massacre during Bleeding Kansas, Brown returned to the North and plotted a far more threatening act. In October 1859, he and 19 supporters, armed with “Beecher’s Bibles,” led a raid on the federal armory and arsenal at Harpers Ferry, Virginia, in an effort to capture and confiscate the arms located there, distribute them among local slaves and begin armed insurrection. ",
   "location": "Virginia",
   "image": "https://apprend.io/wp-content/uploads/2017/06/Compromise-of-1850-Small.jpg",

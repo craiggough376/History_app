@@ -61,20 +61,21 @@ export default {
         title: {},
         selected: {
           'border-color': '#E6AF2E',
+          'background-color': '#FFFFFF90',
 
         }
       },
       dateBreadth: {
-        start: '1981',
-        end: '1988'
+        start: '1665',
+        end: '1861'
       },
       mapUrl: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
       center: [39.804755362523224, -99.16197449275398]
     }
   },
   mounted() {
-    eventBus.$emit('new event selected', -1)
-    this.episodeSelected = 0
+    eventBus.$emit('new event selected', 0)
+    // this.episodeSelected = 0
   }
 }
 </script>
