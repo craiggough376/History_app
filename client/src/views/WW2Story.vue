@@ -48,7 +48,7 @@ export default {
           'border-color': '#A8060C'
         },
         grid: {
-          'background-color': '#A3B18A'
+          'background-color': '#588157'
         },
         timeline: {
           'border-color': '#A8060C'
@@ -82,7 +82,7 @@ export default {
 
 .body{
     background-color: #A3B18A;
-    background-image: url('../assets/images/camo.jpg');
+    /* background-image: url('../assets/images/camo.jpg'); */
     margin: 0px;
     font-family: American Typewriter, serif;
 }
