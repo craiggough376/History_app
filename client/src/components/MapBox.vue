@@ -31,6 +31,7 @@ export default {
   },
     handleNextClick(){
       if ((this.index > -1) && (this.index + 1 < this.events.length )){
+
           this.index ++
           this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
           eventBus.$emit('new event selected', this.index)

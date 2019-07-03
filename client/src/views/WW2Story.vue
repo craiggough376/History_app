@@ -3,14 +3,13 @@
     <div class="titles">
       <h1>World War II | 1939-1945</h1>
     </div>
-    <div class="top-half">
+      <div class="top-half">
         <div class="text-box">
-        <event :event="filteredEvents[selectedEpisode]"/>
+          <event :event="filteredEvents[selectedEpisode]"/>
         </div>
         <div class="map">
           <map-box :selectedEpisode="selectedEpisode" :events="filteredEvents" :mapUrl="mapUrl" :center="center"/>
         </div>
-
     </div>
   <timeline :selectedEpisode="selectedEpisode" :events="filteredEvents" :inheritedStyle="inheritedStyle" :boxWidth="boxWidth" :dateBreadth="dateBreadth"/>
 </div>
