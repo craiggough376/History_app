@@ -55,7 +55,13 @@ export default {
           'border-color': '#E6AF2E'
         },
         boundaries: {
-          'border-color': '#E6AF2E'
+          start: {
+            'border-color': '#E6AF2E'
+          },
+          end: {
+            'border-color': '#E6AF2E'
+          }
+
         },
         date: {},
         title: {},

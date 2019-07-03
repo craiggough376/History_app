@@ -89,7 +89,7 @@ db.events.insertMany([
     "date": "43BC",
     "blurb": "Julius Caesar's young heir, Octavian, joins forces with Mark Anthony and Lepidus to combat Brutus's forces.",
     "location": "Rome",
-    "image": "http://augustusnhd.weebly.com/uploads/4/7/7/4/47744177/8189408_orig.jpg",
+    "image": "https://i.pinimg.com/474x/75/23/5e/75235ee55cc40f955a8d223c8942b6a9--second-triumvirate-julius-caesar.jpg",
     "coordinates": [41.89275569364862, 12.49186506281216]
   },
   {

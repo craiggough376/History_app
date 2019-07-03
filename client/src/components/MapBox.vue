@@ -1,11 +1,10 @@
 <template lang="html">
   <div class="map">
-    <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
+    <l-map v-on:click="showCoordinates"  :zoom="zoom" :minZoom='2' :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="mapUrl"></l-tile-layer>
    <l-marker v-if="index > 0":lat-lng="events[index]['coordinates']">
      <l-popup ref="popup" class="popup">
-       <h3>{{events[this.index].title}}</h3>
-       <p>Location: {{events[this.index].location}}</p>
+       <h2>{{events[this.index].location}}</h2>
      </l-popup>
    </l-marker>
  </l-map>
@@ -31,7 +30,6 @@ export default {
   },
     handleNextClick(){
       if ((this.index > -1) && (this.index + 1 < this.events.length )){
-
           this.index ++
           this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
           eventBus.$emit('new event selected', this.index)

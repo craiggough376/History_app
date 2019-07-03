@@ -54,6 +54,12 @@ export default {
           'border-color': '#A8060C'
         },
         boundaries: {
+          start: {
+
+          },
+          end: {
+
+          }
 
         },
         date: {},

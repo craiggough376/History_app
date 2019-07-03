@@ -55,7 +55,14 @@ export default {
         timeline: {
           'border-color': '#A8060C'
         },
-        boundaries: {},
+        boundaries: {
+          start: {
+
+          },
+          end: {
+
+          }
+        },
         date: {  },
         title: {},
         selected: {

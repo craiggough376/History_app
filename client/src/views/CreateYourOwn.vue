@@ -49,8 +49,16 @@ export default {
         branch: {},
         grid: {},
         timeline: {},
-        boundaries: {},
-        date: {},
+        boundaries: {
+          start: {
+
+          },
+          end: {
+            'grid-column': '92 / 101',
+            'text-align': 'right'
+          }
+        },
+        date: {    },
         title: {},
         selected: {
           "font-weight": "bold",

@@ -1,8 +1,8 @@
 <template lang="html">
 <div>
   <div class="grid" :style="gridStyle">
-    <div class="start-date" :style="inheritedStyle.boundaries">{{dateBreadth.start}}</div>
-    <div class="end-date" :style="inheritedStyle.boundaries">{{dateBreadth.end}}</div>
+    <div class="start-date" :style="inheritedStyle.boundaries.start">{{dateBreadth.start}}</div>
+    <div class="end-date" :style="inheritedStyle.boundaries.end">{{dateBreadth.end}}</div>
     <div class="timeline" :style="inheritedStyle.timeline"></div>
     <div v-for="(episode, index) in events" :class="'episode'+index" :style="styles[index]" v-on:click="handleClick(index)">
       <p class="date" :style="inheritedStyle.date">{{episode.date}}</p>
@@ -52,7 +52,6 @@ export default {
           'box-shadow': '1px 1px black',
           'padding': '1px'
         }
-
         Object.assign(baseStyle, this.inheritedStyle.box)
         if(i == this.selectedEpisode){
           baseStyle['background-color'] = this.highlightColor
