@@ -12,7 +12,7 @@
           <a href="http://localhost:8080/#/ww2story">
           <img src="@/assets/images/ww22.jpg" height="200px" width="300px">
           </a>
-          <h2>World War 2</h2>
+          <h2>World War II</h2>
         </div>
         <div class="image3 image">
           <a href="http://localhost:8080/#/usastory">

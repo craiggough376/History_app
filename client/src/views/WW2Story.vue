@@ -1,8 +1,7 @@
 <template lang="html">
   <div class="body">
     <div class="titles">
-      <h1>World War II</h1>
-      <h2>1939-1945</h2>
+      <h1>World War II | 1939-1945</h1>
     </div>
     <div class="top-half">
         <div class="text-box">
@@ -43,13 +42,14 @@ export default {
       boxWidth: 8,
       inheritedStyle: {
         box: {
-          'background-color': 'white'
+          'background-color': '#DAD7CD'
+        // 'background-image': 'url(../assets/images/camo.jpg)'
         },
         branch: {
           'border-color': '#A8060C'
         },
         grid: {
-          'background-color': '#588157'
+          'background-color': '#A3B18A'
         },
         timeline: {
           'border-color': '#A8060C'
@@ -83,15 +83,15 @@ export default {
 
 .body{
     background-color: #A3B18A;
-    /* background-image: url('../assets/images/camo.jpg'); */
+    background-image: url('../assets/images/camo.jpg');
     margin: 0px;
     font-family: American Typewriter, serif;
 }
 h1{
   size: 1.5rem;
   padding-top: 4px;
-  padding-bottom: 3px;
-  margin-bottom: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   margin-top: 0px;
 }
 
@@ -104,22 +104,26 @@ h1{
 }
 
 .top-half{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
-  justify-content: space-around;
+  padding: 10px;
+  /* justify-content: space-around; */
 }
 
 .map{
-
+  margin: 10px;
 }
 
 .text-box{
+
   width: 30vw;
   font-size: 0.8em;
   border-width: medium;
   border-style: solid;
-  margin: 10px;
+  margin: auto;
   background-image: url('../assets/images/newspapers.jpg');
   background-size: contain;
+
+  transition: width 2s, height 4s;
 }
 </style>
