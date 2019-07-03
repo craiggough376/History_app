@@ -2,7 +2,7 @@
   <div class="map">
     <l-map v-on:click="showCoordinates"  :zoom="zoom" :center="center" :attribution="attribution" ref="map">
    <l-tile-layer :url="mapUrl"></l-tile-layer>
-   <l-marker v-if="index > 0":lat-lng="events[index]['coordinates']">
+   <l-marker :lat-lng="events[index]['coordinates']" ref="marker">
      <l-popup ref="popup" class="popup">
        <h3>{{events[this.index].title}}</h3>
        <p>Location: {{events[this.index].location}}</p>
@@ -48,7 +48,7 @@ export default {
       this.index = 0
       this.$refs.map.mapObject.flyTo(this.events[this.index]['coordinates'], 10)
       eventBus.$emit('new event selected', this.index)
-      // this.$refs.map.mapObject.openPopup()
+      this.$refs.marker.mapObject.openPopup()
     },
     jumpToEvent(indexSelected){
       this.index = indexSelected
@@ -62,7 +62,7 @@ export default {
       url:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       marker: L.latLng(47.413220, -1.219482),
-      index: null,
+      index: 0,
       map: null,
       places: [
         {
@@ -105,9 +105,9 @@ export default {
 }
 
 .popup{
-  width: 150px;
+  /* width: 150px;
 height: 50px;
-overflow: scroll;
+overflow: scroll; */
 }
 
 .buttons{
